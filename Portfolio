@@ -1,0 +1,133 @@
+index.html
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aja Olufsen – Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f2;
+      color: #1d1d1d;
+    }
+
+    header {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 10%;
+    }
+
+    h1 {
+      font-size: clamp(50px, 9vw, 110px);
+      margin: 0;
+      line-height: 0.95;
+    }
+
+    header p {
+      max-width: 650px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .project h3 {
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    footer {
+      padding: 50px 10%;
+      background: #1d1d1d;
+      color: white;
+    }
+
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p>Digital transformation · Interactive design · Technology</p>
+
+    <h1>Aja<br>Olufsen</h1>
+
+    <p>
+      Jeg arbejder med digital transformation, interaktive installationer
+      og teknologier, der skaber refleksion og engagement.
+    </p>
+  </header>
+
+  <section>
+    <h2>Udvalgte projekter</h2>
+
+    <div class="projects">
+
+      <article class="project">
+        <h3>Fremtidskonsultationen</h3>
+        <p>
+          En interaktiv robotlæge udviklet i samarbejde med Steno Museet.
+          Installationen undersøger prævention, ansvar og køn gennem
+          speculative og critical design.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Præventionslinjen</h3>
+        <p>
+          En interaktiv telefoninstallation til Roskilde Festival med lyd,
+          fysiske knapper, Arduino og anonym dataindsamling.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Barnabókaklubbin</h3>
+        <p>
+          Et digitaliseringsprojekt med analyse af arbejdsgange og forslag
+          til automatisering gennem RPA og Power Automate.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Om mig</h2>
+
+    <p>
+      Jeg er cand.it. i Digital Transformation med specialisering i Digital
+      Design. Jeg kombinerer analyse, teknologi og design for at udvikle
+      digitale løsninger og interaktive oplevelser.
+    </p>
+  </section>
+
+  <footer>
+    <h2>Kontakt</h2>
+    <p>Indsæt din e-mail og LinkedIn her.</p>
+  </footer>
+
+</body>
+</html>
