@@ -1,125 +1,443 @@
-<main class="project-page">
+<!DOCTYPE html>
+<html lang="en">
 
-  <a href="index.html" class="back-link">← Back</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Barnabókaklubbin — Aja Olufsen</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 35px 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+
+    /* PROJECT HEADER */
+
+    .project-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 40px 70px;
+    }
+
+    .project-header h1 {
+      font-size: clamp(45px, 7vw, 85px);
+      font-weight: 500;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin: 0 0 25px;
+    }
+
+    .project-meta {
+      color: #777;
+      font-size: 15px;
+    }
+
+
+    /* HERO IMAGE */
+
+    .hero-image {
+      max-width: 1200px;
+      height: 650px;
+      margin: 0 auto;
+      background: #eeeeee;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* CONTENT */
+
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 140px 80px 160px;
+    }
+
+    .section {
+      margin-bottom: 110px;
+    }
+
+    .section h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-weight: 500;
+      margin: 0 0 32px;
+    }
+
+    .section p {
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 0 0 24px;
+      color: #555;
+    }
+
+
+    /* LARGE STATEMENT */
+
+    .highlight {
+      max-width: 760px;
+      font-size: clamp(27px, 3vw, 38px);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -1px;
+      color: #111;
+      margin: 130px 0;
+    }
+
+
+    /* OPTIONAL PROJECT IMAGES */
+
+    .project-image {
+      width: 100%;
+      height: 500px;
+      background: #eeeeee;
+      margin: 100px 0;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* DETAILS */
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+
+      border-top: 1px solid #ddd;
+      padding-top: 40px;
+      margin-top: 130px;
+    }
+
+    .details h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 18px;
+    }
+
+    .details p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #666;
+      margin: 0;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 25px 20px;
+      }
+
+      .project-header {
+        padding: 70px 20px 50px;
+      }
+
+      .project-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-image {
+        height: 350px;
+        margin: 0 20px;
+      }
+
+      .content {
+        padding: 80px 30px 100px;
+      }
+
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section p {
+        font-size: 16px;
+      }
+
+      .highlight {
+        margin: 90px 0;
+        font-size: 27px;
+      }
+
+      .project-image {
+        height: 350px;
+        margin: 70px 0;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 90px;
+      }
+
+      footer {
+        margin: 0 20px;
+        padding: 35px 0;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a class="name" href="index.html">
+      Aja Olufsen
+    </a>
+
+    <a class="back" href="index.html">
+      ← Back to projects
+    </a>
+
+  </nav>
+
+
+  <!-- PROJECT HEADER -->
 
   <header class="project-header">
-    <h1>BARNABÓKAKLUBBIN</h1>
-    <p class="project-meta">
-      Process Automation · Digital Transformation · RPA · 2025
-    </p>
+
+    <h1>Barnabókaklubbin</h1>
+
+    <div class="project-meta">
+      Digital Transformation · Process Optimisation · RPA · 2025
+    </div>
+
   </header>
 
+
+  <!-- HERO IMAGE -->
+
   <div class="hero-image">
+
     <img
       src="images/barnabokaklubbin/bogklub-hero.jpg"
       alt="Barnabókaklubbin children's book club"
     >
+
   </div>
 
 
-  <section class="project-intro">
+  <!-- CONTENT -->
 
-    <p class="project-label">THE CHALLENGE</p>
-
-    <h2>
-      What happens when a growing digital service still depends on
-      repetitive manual work behind the scenes?
-    </h2>
-
-    <p>
-      Barnabókaklubbin is an Icelandic children's book club with administrative
-      processes that required recurring manual handling of member and order data.
-      Our task was to investigate the existing workflow and identify where
-      automation could reduce repetitive work and create a more efficient process.
-    </p>
-
-  </section>
+  <main class="content">
 
 
-  <section class="project-section">
+    <!-- ABOUT -->
 
-    <p class="project-label">PROCESS</p>
+    <section class="section">
 
-    <h2>From manual workflow to automated process</h2>
+      <h2>About</h2>
 
-    <p>
-      We began by mapping the existing workflow step by step. Rather than
-      automating individual actions immediately, we looked at the process as
-      a system: where information entered the workflow, how it moved between
-      tasks, and where unnecessary manual work occurred.
-    </p>
+      <p>
+        Barnabókaklubbin is an Icelandic children's book club with
+        administrative workflows involving recurring manual handling
+        of member and order data.
+      </p>
 
-    <p>
-      Based on this analysis, we redesigned parts of the workflow and developed
-      an RPA solution using Microsoft Power Automate.
-    </p>
+      <p>
+        The project explored how these existing processes could be
+        analysed, redesigned and partially automated through robotic
+        process automation.
+      </p>
 
-  </section>
+    </section>
 
 
-  <section class="project-highlight">
+    <!-- CHALLENGE -->
 
-    <p class="project-label">APPROACH</p>
+    <section class="section">
 
-    <h2>
+      <h2>The Challenge</h2>
+
+      <p>
+        We mapped the existing workflow step by step to identify
+        repetitive tasks, bottlenecks and points where information
+        had to be handled manually.
+      </p>
+
+      <p>
+        Rather than immediately automating individual tasks, we
+        approached the workflow as a complete system and examined
+        how information moved through the organisation.
+      </p>
+
+    </section>
+
+
+    <!-- STATEMENT -->
+
+    <div class="highlight">
       Automation was not the starting point.<br>
       Understanding the process was.
-    </h2>
-
-  </section>
-
-
-  <section class="project-section">
-
-    <p class="project-label">SOLUTION</p>
-
-    <h2>Designing the automation</h2>
-
-    <p>
-      The resulting solution automated repetitive steps within the existing
-      administrative process while preserving the points where human input
-      was still needed.
-    </p>
-
-    <p>
-      The project became an exercise in process optimisation as much as
-      automation: translating organisational routines into a structured
-      digital workflow that could be executed consistently.
-    </p>
-
-  </section>
-
-
-  <section class="project-details">
-
-    <div class="detail">
-      <h3>MY ROLE</h3>
-      <p>
-        Process analysis<br>
-        Workflow design<br>
-        RPA development<br>
-        Prototyping
-      </p>
     </div>
 
-    <div class="detail">
-      <h3>TOOLS</h3>
+
+    <!-- SOLUTION -->
+
+    <section class="section">
+
+      <h2>The Solution</h2>
+
       <p>
-        Microsoft Power Automate<br>
-        Process mapping<br>
-        RPA
+        Based on the process analysis, we redesigned parts of the
+        workflow and developed an RPA solution using Microsoft
+        Power Automate.
       </p>
+
+      <p>
+        The aim was to reduce repetitive administrative work while
+        preserving the parts of the process where human input was
+        still necessary.
+      </p>
+
+    </section>
+
+
+    <!-- MY ROLE -->
+
+    <section class="section">
+
+      <h2>My Role</h2>
+
+      <p>
+        I worked with process analysis, workflow design and the
+        development of the automation solution, translating the
+        existing administrative process into a structured digital
+        workflow.
+      </p>
+
+    </section>
+
+
+    <!-- DETAILS -->
+
+    <div class="details">
+
+      <div>
+
+        <h3>Methods</h3>
+
+        <p>
+          Process Mapping<br>
+          Workflow Analysis<br>
+          Process Optimisation<br>
+          Prototyping
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Technology</h3>
+
+        <p>
+          Microsoft Power Automate<br>
+          Robotic Process Automation<br>
+          Digital Workflows
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="detail">
-      <h3>FOCUS</h3>
-      <p>
-        Digital transformation<br>
-        Process optimisation<br>
-        Automation
-      </p>
-    </div>
 
-  </section>
+  </main>
 
-</main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <a href="index.html">
+      ← Back to all projects
+    </a>
+
+  </footer>
+
+
+</body>
+
+</html>
