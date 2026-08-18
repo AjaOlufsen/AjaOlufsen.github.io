@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Contraception Line  — Aja Olufsen</title>
+  <title>The Sunflower Lanyard — Aja Olufsen</title>
 
   <style>
     * {
@@ -71,82 +71,115 @@
       font-size: 15px;
     }
 
-    /* HERO IMAGE */
+    /* HERO */
 
     .hero-image {
       max-width: 1200px;
-      height: 1000px;
+      height: 650px;
       margin: 0 auto;
       background: #eeeeee;
+      overflow: hidden;
     }
-  .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     /* CONTENT */
 
     .content {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 140px 80px 160px;
     }
 
     .section {
-      margin-bottom: 80px;
+      margin-bottom: 110px;
     }
 
     .section h2 {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
       font-weight: 500;
-      margin: 0 0 20px;
+      margin: 0 0 32px;
     }
 
     .section p {
-      font-size: 18px;
-      margin: 0;
-      color: #333;
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 0 0 24px;
+      color: #555;
     }
 
-    /* IMAGE */
+    /* LARGE STATEMENT */
+
+    .highlight {
+      max-width: 760px;
+      font-size: clamp(27px, 3vw, 38px);
+      line-height: 1.35;
+      letter-spacing: -1px;
+      color: #111;
+      margin: 130px 0;
+    }
+
+    /* VIDEO */
+
+    .project-video {
+      width: 100%;
+      margin: 100px 0;
+      background: #000;
+    }
+
+    .project-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* PROJECT IMAGE */
 
     .project-image {
       width: 100%;
-      height: 500px;
+      margin: 100px 0;
+      overflow: hidden;
       background: #eeeeee;
-      margin: 60px 0;
     }
+
     .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     /* DETAILS */
 
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 80px;
       border-top: 1px solid #ddd;
-      padding-top: 30px;
+      padding-top: 40px;
+      margin-top: 130px;
     }
 
     .details h3 {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 18px;
     }
 
     .details p {
       font-size: 15px;
+      line-height: 1.8;
       color: #666;
+      margin: 0;
     }
 
     /* FOOTER */
@@ -176,22 +209,41 @@
         padding: 70px 20px 50px;
       }
 
+      .project-header h1 {
+        letter-spacing: -2px;
+      }
+
       .hero-image {
         height: 350px;
         margin: 0 20px;
       }
 
       .content {
-        padding: 70px 20px;
+        padding: 80px 30px 100px;
       }
 
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section p {
+        font-size: 16px;
+      }
+
+      .highlight {
+        margin: 90px 0;
+        font-size: 27px;
+      }
+
+      .project-video,
       .project-image {
-        height: 350px;
+        margin: 70px 0;
       }
 
       .details {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
+        margin-top: 90px;
       }
 
       footer {
@@ -199,17 +251,15 @@
         padding: 35px 0;
       }
     }
+
   </style>
-
 </head>
-
 
 <body>
 
   <!-- NAVIGATION -->
 
   <nav>
-
     <a class="name" href="index.html">
       Aja Olufsen
     </a>
@@ -217,97 +267,152 @@
     <a class="back" href="index.html">
       ← Back to projects
     </a>
-
   </nav>
 
-
-  <!-- PROJECT TITLE -->
+  <!-- PROJECT HEADER -->
 
   <header class="project-header">
 
-    <h1>The Contraception Line</h1>
+    <h1>The Sunflower Lanyard</h1>
 
     <div class="project-meta">
-      Interactive Installation · Roskilde Festival · 2026
+      Critical Design · Interactive Installation · Research through Design · 2025
     </div>
 
   </header>
 
-
-  <!-- MAIN IMAGE -->
+  <!-- HERO -->
 
   <div class="hero-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-hero.JPG" alt="Præventionslinjen interactive installation at Roskilde Festival">
-</div>
+    <img
+      src="images/sunflower-lanyard/sunflower-lanyard-hero.jpg"
+      alt="The Sunflower Lanyard critical design project"
+    >
+  </div>
 
-
-  <!-- PROJECT CONTENT -->
+  <!-- CONTENT -->
 
   <main class="content">
 
+    <!-- ABOUT -->
 
     <section class="section">
 
       <h2>About</h2>
 
       <p>
-        The Contraception Line is an interactive installation developed for
-        Roskilde Festival. The project explores contraception, responsibility
-        and sexual health through an anonymous and playful interaction.
+        The project explored how the Sunflower Lanyard functions as a social
+        symbol for invisible disabilities, and how visibility can both create
+        understanding and contribute to stigma, judgement and social categorisation.
+      </p>
+
+      <p>
+        Rather than redesigning the lanyard as a product, we used Critical Design
+        and Research through Design to investigate how stigma could be made visible,
+        felt and reflected back to the people observing it.
       </p>
 
     </section>
 
+    <!-- STARING RIGHT BACK -->
 
     <section class="section">
 
-      <h2>The project</h2>
+      <h2>Staring Right Back</h2>
 
       <p>
-        Visitors interact with the installation through a telephone receiver
-        and physical buttons. Through a short series of questions, the
-        installation collects anonymous responses and visualises the results.
+        Staring Right Back was developed as an immersive installation that
+        explored the bodily experience of being watched, judged and socially
+        exposed.
+      </p>
+
+      <p>
+        Projected eyes and recorded voices turned the gaze towards the participant,
+        shifting them from observer to observed. The intention was not simply to
+        explain stigma, but to create a situation in which it could be experienced
+        through the body.
       </p>
 
     </section>
 
+    <!-- VIDEO -->
 
-    <!-- IMAGE PLACEHOLDER -->
+    <div class="project-video">
+
+      <video controls playsinline preload="metadata">
+        <source
+          src="images/sunflower-lanyard/sunflower-lanyard-video.mp4"
+          type="video/mp4"
+        >
+        Your browser does not support video playback.
+      </video>
+
+    </div>
+
+    <!-- EMBODIED MIRRORING -->
+
+    <section class="section">
+
+      <h2>Embodied Mirroring</h2>
+
+      <p>
+        Through the project we developed the concept of Embodied Mirroring:
+        a design approach in which participants do not only engage physically
+        with an experience, but are placed in a situation that mirrors another
+        person's embodied experience.
+      </p>
+
+      <p>
+        In Staring Right Back, this meant turning the experience of being stared
+        at back towards the observer, using sensory and affective interaction to
+        create space for recognition, empathy and reflection.
+      </p>
+
+    </section>
+
+    <!-- EXPERIENCE IMAGE -->
 
     <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-interaction.JPG" alt="Visitor interacting with Præventionslinjen at Roskilde Festival">
-</div>
+
+      <img
+        src="images/sunflower-lanyard/sunflower-lanyard-experience.jpg"
+        alt="Staring Right Back immersive installation"
+      >
+
+    </div>
+
+    <!-- PROCESS -->
 
     <section class="section">
 
-      <h2>My role</h2>
+      <h2>Research & Process</h2>
 
       <p>
-        I worked on the concept, interaction design, physical prototyping
-        and technical development of the installation.
+        The project developed through exploratory experiments, prototyping and
+        iterative testing. Early studies investigated how the Sunflower Lanyard
+        influenced first impressions and social interpretation.
+      </p>
+
+      <p>
+        These insights informed increasingly embodied design experiments, moving
+        from observation and interviews towards critical installations that used
+        discomfort, visibility and role reversal as design material.
       </p>
 
     </section>
 
+    <!-- INSTALLATION IMAGE -->
 
-    <section class="section">
+    <div class="project-image">
 
-      <h2>Process</h2>
+      <img
+        src="images/sunflower-lanyard/sunflower-lanyard-installation.jpg"
+        alt="Physical setup of the Staring Right Back installation"
+      >
 
-      <p>
-        The project involved concept development, prototyping, testing and
-        iterative development of both the physical and digital interaction.
-      </p>
+    </div>
 
-    </section>
-
-
-    <!-- IMAGE PLACEHOLDER -->
-
-   <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-prototyping.JPG" alt="Prototyping the electronics for Præventionslinjen">
-</div>
-
+    <!-- DETAILS -->
 
     <div class="details">
 
@@ -316,32 +421,35 @@
         <h3>Methods</h3>
 
         <p>
-          Interaction Design<br>
+          Research through Design<br>
+          Critical Design<br>
+          Speculative Design<br>
+          Embodied Interaction<br>
           Prototyping<br>
-          User Testing
+          Qualitative Research
         </p>
 
       </div>
-
 
       <div>
 
         <h3>Technology</h3>
 
         <p>
-          Arduino<br>
-          Physical Computing<br>
+          Projection<br>
+          Interactive Visuals<br>
           Audio<br>
-          LCD Display
+          Physical Computing<br>
+          Digital Prototyping
         </p>
 
       </div>
 
     </div>
 
-
   </main>
 
+  <!-- FOOTER -->
 
   <footer>
 
@@ -350,7 +458,6 @@
     </a>
 
   </footer>
-
 
 </body>
 
