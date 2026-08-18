@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Contraception Line  — Aja Olufsen</title>
+  <title>Viking Ship Museum App — Aja Olufsen</title>
 
   <style>
     * {
@@ -24,6 +24,7 @@
       color: inherit;
       text-decoration: none;
     }
+
 
     /* NAVIGATION */
 
@@ -50,6 +51,7 @@
       color: #111;
     }
 
+
     /* PROJECT HEADER */
 
     .project-header {
@@ -71,83 +73,110 @@
       font-size: 15px;
     }
 
-    /* HERO IMAGE */
+
+    /* HERO */
 
     .hero-image {
       max-width: 1200px;
-      height: 1000px;
+      height: 720px;
       margin: 0 auto;
       background: #eeeeee;
+      overflow: hidden;
     }
-  .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
+    }
+
 
     /* CONTENT */
 
     .content {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 140px 80px 160px;
     }
 
     .section {
-      margin-bottom: 80px;
+      margin-bottom: 110px;
     }
 
     .section h2 {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
       font-weight: 500;
-      margin: 0 0 20px;
+      margin: 0 0 32px;
     }
 
     .section p {
-      font-size: 18px;
-      margin: 0;
-      color: #333;
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 0 0 24px;
+      color: #555;
     }
 
-    /* IMAGE */
+
+    /* LARGE STATEMENT */
+
+    .highlight {
+      max-width: 760px;
+      font-size: clamp(27px, 3vw, 38px);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -1px;
+      color: #111;
+      margin: 130px 0;
+    }
+
+
+    /* PROJECT IMAGES */
 
     .project-image {
       width: 100%;
-      height: 500px;
+      margin: 100px 0;
+      overflow: hidden;
       background: #eeeeee;
-      margin: 60px 0;
     }
+
     .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
 
     /* DETAILS */
 
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 80px;
       border-top: 1px solid #ddd;
-      padding-top: 30px;
+      padding-top: 40px;
+      margin-top: 130px;
     }
 
     .details h3 {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 18px;
     }
 
     .details p {
       font-size: 15px;
+      line-height: 1.8;
       color: #666;
+      margin: 0;
     }
+
 
     /* FOOTER */
 
@@ -164,6 +193,7 @@
       text-underline-offset: 3px;
     }
 
+
     /* MOBILE */
 
     @media (max-width: 700px) {
@@ -176,22 +206,40 @@
         padding: 70px 20px 50px;
       }
 
+      .project-header h1 {
+        letter-spacing: -2px;
+      }
+
       .hero-image {
-        height: 350px;
+        height: 420px;
         margin: 0 20px;
       }
 
       .content {
-        padding: 70px 20px;
+        padding: 80px 30px 100px;
+      }
+
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section p {
+        font-size: 16px;
+      }
+
+      .highlight {
+        margin: 90px 0;
+        font-size: 27px;
       }
 
       .project-image {
-        height: 350px;
+        margin: 70px 0;
       }
 
       .details {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
+        margin-top: 90px;
       }
 
       footer {
@@ -199,12 +247,13 @@
         padding: 35px 0;
       }
     }
-  </style>
 
+  </style>
 </head>
 
 
 <body>
+
 
   <!-- NAVIGATION -->
 
@@ -221,93 +270,186 @@
   </nav>
 
 
-  <!-- PROJECT TITLE -->
+  <!-- PROJECT HEADER -->
 
   <header class="project-header">
 
-    <h1>The Contraception Line</h1>
+    <h1>Viking Ship Museum App</h1>
 
     <div class="project-meta">
-      Interactive Installation · Roskilde Festival · 2026
+      Interaction Design · Digital Museum Experience · Prototyping · 2024
     </div>
 
   </header>
 
 
-  <!-- MAIN IMAGE -->
+  <!-- HERO -->
 
   <div class="hero-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-hero.JPG" alt="Præventionslinjen interactive installation at Roskilde Festival">
-</div>
+
+    <img
+      src="images/viking-ship-museum/viking-ship-museum-hero.jpg"
+      alt="Final Viking Ship Museum mobile app concept"
+    >
+
+  </div>
 
 
-  <!-- PROJECT CONTENT -->
+  <!-- CONTENT -->
 
   <main class="content">
 
+
+    <!-- ABOUT -->
 
     <section class="section">
 
       <h2>About</h2>
 
       <p>
-        The Contraception Line is an interactive installation developed for
-        Roskilde Festival. The project explores contraception, responsibility
-        and sexual health through an anonymous and playful interaction.
+        This project explored how digital interaction could create a more
+        engaging and accessible experience for visitors at the Viking Ship Museum
+        in Roskilde.
+      </p>
+
+      <p>
+        The museum wanted to improve the way visitors discovered activities,
+        information and historical content, while also exploring new ways of
+        communicating the museum experience through digital technology.
       </p>
 
     </section>
 
+
+    <!-- CHALLENGE -->
 
     <section class="section">
 
-      <h2>The project</h2>
+      <h2>The Challenge</h2>
 
       <p>
-        Visitors interact with the installation through a telephone receiver
-        and physical buttons. Through a short series of questions, the
-        installation collects anonymous responses and visualises the results.
+        Existing information displays could be difficult for international
+        visitors to understand, while parts of the museum required new ways
+        of communicating historical knowledge when staff were not present.
+      </p>
+
+      <p>
+        We therefore explored how an interactive digital platform could
+        motivate visitors to engage more actively with the museum rather
+        than simply receive information passively.
       </p>
 
     </section>
 
 
-    <!-- IMAGE PLACEHOLDER -->
+    <!-- STATEMENT -->
+
+    <div class="highlight">
+      How can learning feel like exploration rather than instruction?
+    </div>
+
+
+    <!-- CONCEPT -->
+
+    <section class="section">
+
+      <h2>The Concept</h2>
+
+      <p>
+        The concept evolved into a mobile treasure hunt aimed primarily at
+        younger visitors. Guests could download the app, scan QR codes placed
+        throughout the museum and complete missions guided by animated Viking
+        characters.
+      </p>
+
+      <p>
+        Each scanned code revealed a new task or piece of historical content,
+        encouraging visitors to move through the museum and discover the next
+        location through play.
+      </p>
+
+    </section>
+
+
+    <!-- PROTOTYPE IMAGE -->
 
     <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-interaction.JPG" alt="Visitor interacting with Præventionslinjen at Roskilde Festival">
-</div>
+
+      <img
+        src="images/viking-ship-museum/viking-ship-museum-prototype.jpg"
+        alt="Early prototype of the Viking Ship Museum app"
+      >
+
+    </div>
+
+
+    <!-- PROCESS -->
 
     <section class="section">
 
-      <h2>My role</h2>
+      <h2>Design Process</h2>
 
       <p>
-        I worked on the concept, interaction design, physical prototyping
-        and technical development of the installation.
+        The project developed through several iterations, beginning with
+        speculative design and the question: What if Vikings still existed
+        in contemporary society?
+      </p>
+
+      <p>
+        This exploration gradually moved from speculative scenarios towards
+        a more concrete museum experience. We used ideation, storyboarding,
+        design sprints and prototyping to define the interaction and test
+        different ways of combining play, navigation and learning.
+      </p>
+
+      <p>
+        A functional prototype was developed with a particular focus on the
+        QR-code interaction, which became the central link between the
+        physical museum environment and the digital experience.
       </p>
 
     </section>
 
 
+    <!-- USER TESTING IMAGE -->
+
+    <div class="project-image">
+
+      <img
+        src="images/viking-ship-museum/viking-ship-museum-user-testing.jpg"
+        alt="User testing of the Viking Ship Museum app"
+      >
+
+    </div>
+
+
+    <!-- TESTING -->
+
     <section class="section">
 
-      <h2>Process</h2>
+      <h2>User Testing</h2>
 
       <p>
-        The project involved concept development, prototyping, testing and
-        iterative development of both the physical and digital interaction.
+        The prototype was tested with users and museum staff to evaluate both
+        the interface and the overall experience.
+      </p>
+
+      <p>
+        Participants responded positively to the interactive treasure hunt,
+        particularly the animated Viking characters and the use of QR codes
+        as a way of progressing through the experience.
+      </p>
+
+      <p>
+        The testing helped us refine the relationship between entertainment
+        and learning, with the aim of making historical information feel
+        integrated into the interaction rather than added on top of it.
       </p>
 
     </section>
 
 
-    <!-- IMAGE PLACEHOLDER -->
-
-   <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-prototyping.JPG" alt="Prototyping the electronics for Præventionslinjen">
-</div>
-
+    <!-- DETAILS -->
 
     <div class="details">
 
@@ -316,7 +458,10 @@
         <h3>Methods</h3>
 
         <p>
-          Interaction Design<br>
+          Research through Design<br>
+          Design Sprint 2.0<br>
+          Speculative Design<br>
+          Storyboarding<br>
           Prototyping<br>
           User Testing
         </p>
@@ -326,13 +471,14 @@
 
       <div>
 
-        <h3>Technology</h3>
+        <h3>Technology & Design</h3>
 
         <p>
-          Arduino<br>
-          Physical Computing<br>
-          Audio<br>
-          LCD Display
+          Mobile Interaction<br>
+          QR-code Interaction<br>
+          p5.js<br>
+          Digital Prototyping<br>
+          Interaction Design
         </p>
 
       </div>
@@ -342,6 +488,8 @@
 
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
