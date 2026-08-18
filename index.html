@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
     }
 
@@ -24,33 +24,75 @@
       text-decoration: none;
     }
 
+
     /* HEADER */
 
     header {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 70px 40px 90px;
+      padding: 85px 40px 110px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
     }
 
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(42px, 6vw, 76px);
-      font-weight: 500;
-      letter-spacing: -3px;
-    }
-
-    header p {
       margin: 0;
-      font-size: 17px;
-      color: #666;
+      font-size: clamp(52px, 7vw, 92px);
+      font-weight: 500;
+      letter-spacing: -4px;
+      line-height: 0.95;
     }
 
-    /* PROJECTS */
+    .header-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: #666;
+      padding-top: 12px;
+    }
+
+    .header-links a:hover {
+      color: #111;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-top: 45px;
+      font-size: 20px;
+      line-height: 1.55;
+      color: #555;
+    }
+
+    .intro strong {
+      color: #111;
+      font-weight: 500;
+    }
+
+    .location {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #888;
+    }
+
+
+    /* MAIN */
 
     main {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 40px 100px;
+      padding: 0 40px 120px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
     }
 
     h2 {
@@ -58,24 +100,49 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin: 0 0 30px;
+      margin: 0;
     }
+
+    .project-count {
+      font-size: 13px;
+      color: #999;
+    }
+
+
+    /* PROJECT GRID */
 
     .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 60px 30px;
+      gap: 32px;
     }
 
     .project {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+
+      background: #ffffff;
+      border: 1px solid #ddddda;
+      border-radius: 20px;
+      padding: 18px;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
     }
 
     .project-image {
       width: 100%;
       aspect-ratio: 4 / 3;
-      background: #eeeeee;
+      border-radius: 14px;
       overflow: hidden;
+      background: #eeeeec;
     }
 
     .project-image img {
@@ -83,35 +150,105 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     .project:hover img {
-      transform: scale(1.015);
+      transform: scale(1.02);
+    }
+
+
+    /* PROJECT CONTENT */
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 22px 8px 6px;
     }
 
     .project h3 {
-      font-size: 19px;
+      font-size: 23px;
       font-weight: 500;
-      margin: 15px 0 5px;
+      line-height: 1.18;
+      letter-spacing: -0.5px;
+      margin: 0 0 8px;
     }
 
-    .project p {
-      margin: 0;
-      color: #777;
+    .project-meta {
+      margin: 0 0 18px;
+      color: #888;
       font-size: 14px;
     }
+
+    .project-description {
+      margin: 0;
+      max-width: 560px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+
+    /* CARD BOTTOM */
+
+    .project-bottom {
+      margin-top: auto;
+      padding-top: 28px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 11px;
+
+      border: 1px solid #ddddda;
+      border-radius: 100px;
+
+      font-size: 12px;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .view-project {
+      flex-shrink: 0;
+      font-size: 14px;
+      border: 1px solid #ddddda;
+      border-radius: 10px;
+      padding: 9px 13px;
+      transition: background 0.2s ease;
+    }
+
+    .project:hover .view-project {
+      background: #f2f2ef;
+    }
+
 
     /* FOOTER */
 
     footer {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 40px;
-      border-top: 1px solid #ddd;
+      padding: 45px 40px;
+
+      border-top: 1px solid #ddddda;
+
       display: flex;
       justify-content: space-between;
+      gap: 30px;
+
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -119,21 +256,58 @@
       text-underline-offset: 3px;
     }
 
+
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       header {
-        padding: 45px 20px 65px;
+        padding: 55px 20px 80px;
+      }
+
+      .header-top {
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .header-links {
+        padding-top: 0;
+      }
+
+      .intro {
+        font-size: 18px;
+        margin-top: 35px;
       }
 
       main {
-        padding: 0 20px 70px;
+        padding: 0 20px 80px;
       }
 
       .projects {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 26px;
+      }
+
+      .project {
+        border-radius: 16px;
+        padding: 14px;
+      }
+
+      .project-image {
+        border-radius: 11px;
+      }
+
+      .project-content {
+        padding: 20px 5px 5px;
+      }
+
+      .project-bottom {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       footer {
@@ -143,57 +317,182 @@
         gap: 10px;
       }
     }
+
   </style>
 </head>
 
 
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
-    <h1>Aja Olufsen</h1>
-    <p>Digital Transformation · Interaction Design · Technology</p>
+
+    <div class="header-top">
+
+      <h1>Aja Olufsen</h1>
+
+      <div class="header-links">
+
+        <a
+          href="https://www.linkedin.com/in/aja-olufsen-85204328b"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a href="mailto:aja-olufsen@live.dk">
+          Email ↗
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="intro">
+
+      <strong>
+        Digital designer working across interaction design,
+        digital transformation and physical computing.
+      </strong>
+
+      I design digital and physical experiences that explore how
+      technology shapes people, organisations and everyday life.
+
+    </div>
+
+    <div class="location">
+      Copenhagen, Denmark
+    </div>
+
   </header>
 
 
+
+  <!-- PROJECTS -->
+
   <main>
 
-    <h2>Projects</h2>
+    <div class="section-heading">
+
+      <h2>Selected Projects</h2>
+
+      <span class="project-count">
+        8 projects
+      </span>
+
+    </div>
+
 
     <div class="projects">
 
 
-      <!-- THE CONTRACEPTION LINE -->
+      <!-- CONTRACEPTION LINE -->
 
       <a class="project" href="praeventionslinjen.html">
 
         <div class="project-image">
+
           <img
             src="images/praeventionslinjen/praeventionslinjen-hero.JPG"
             alt="The Contraception Line interactive installation"
           >
+
         </div>
 
-        <h3>The Contraception Line</h3>
-        <p>Interactive Installation · Roskilde Festival · 2026</p>
+
+        <div class="project-content">
+
+          <h3>The Contraception Line</h3>
+
+          <p class="project-meta">
+            Interactive Installation · Roskilde Festival · 2026
+          </p>
+
+          <p class="project-description">
+            An interactive telephone installation exploring contraception,
+            responsibility and sexual health through anonymous participation
+            at Roskilde Festival.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Physical Computing</span>
+
+              <span class="tag">Arduino</span>
+
+              <span class="tag">Interaction Design</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
 
 
-      <!-- UNIT 12:2 -->
+
+      <!-- FUTURE CONSULTATION -->
 
       <a class="project" href="unit-12-2.html">
 
         <div class="project-image">
+
           <img
             src="images/future-consultation/future-consultation-hero-new.jpg"
             alt="UNIT 12:2 Future Consultation installation"
           >
+
         </div>
 
-        <h3>UNIT 12:2 — The Future Consultation</h3>
-        <p>Interactive Installation · Steno Museum · 2026</p>
+
+        <div class="project-content">
+
+          <h3>UNIT 12:2 — The Future Consultation</h3>
+
+          <p class="project-meta">
+            Interactive Installation · Steno Museum · 2026
+          </p>
+
+          <p class="project-description">
+            A speculative robotic consultation that challenges assumptions
+            about gender, contraception and reproductive responsibility.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Research through Design</span>
+
+              <span class="tag">Physical Computing</span>
+
+              <span class="tag">Speculative Design</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- CONTRACEPTION WORKSHOP -->
@@ -201,16 +500,52 @@
       <a class="project" href="workshop-praeventionsformer.html">
 
         <div class="project-image">
+
           <img
             src="images/workshop/workshop-hero.jpg"
             alt="Contraception and responsibility workshop"
           >
+
         </div>
 
-        <h3>Contraception & Responsibility Workshop</h3>
-        <p>Participatory Design · User Research · 2026</p>
+
+        <div class="project-content">
+
+          <h3>Contraception & Responsibility Workshop</h3>
+
+          <p class="project-meta">
+            Participatory Design · User Research · 2026
+          </p>
+
+          <p class="project-description">
+            A facilitated research workshop with young people exploring
+            contraceptive knowledge, gender roles and perceptions of
+            responsibility.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Facilitation</span>
+
+              <span class="tag">User Research</span>
+
+              <span class="tag">Participatory Design</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- BARNABÓKAKLUBBIN -->
@@ -218,16 +553,52 @@
       <a class="project" href="barnabokaklubbin.html">
 
         <div class="project-image">
+
           <img
             src="images/barnabokaklubbin/bogklub-hero.jpg"
-            alt="Barnabókaklubbin digitalisation project"
+            alt="Barnabókaklubbin digital transformation project"
           >
+
         </div>
 
-        <h3>Barnabókaklubbin</h3>
-        <p>Digitalisation · Process Optimisation · RPA</p>
+
+        <div class="project-content">
+
+          <h3>Barnabókaklubbin</h3>
+
+          <p class="project-meta">
+            Digital Transformation · Process Optimisation · RPA
+          </p>
+
+          <p class="project-description">
+            Exploring how robotic process automation can reduce repetitive
+            administrative work while preserving human judgement and
+            organisational knowledge.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">RPA</span>
+
+              <span class="tag">Power Automate</span>
+
+              <span class="tag">Process Mapping</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- JELLYFISH -->
@@ -235,16 +606,51 @@
       <a class="project" href="jellyfish.html">
 
         <div class="project-image">
+
           <img
             src="images/jellyfish/jellyfish-hero.jpg"
             alt="Jellyfish interactive light installation"
           >
+
         </div>
 
-        <h3>Jellyfish</h3>
-        <p>Interactive Light Installation · Roskilde Festival · 2025</p>
+
+        <div class="project-content">
+
+          <h3>Jellyfish</h3>
+
+          <p class="project-meta">
+            Interactive Light Installation · Roskilde Festival · 2025
+          </p>
+
+          <p class="project-description">
+            A sensory light installation creating a calm and meditative
+            pause within the intensity of the festival environment.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Embodied Interaction</span>
+
+              <span class="tag">NeoPixel</span>
+
+              <span class="tag">Prototyping</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- SUNFLOWER LANYARD -->
@@ -252,16 +658,52 @@
       <a class="project" href="sunflower-lanyard.html">
 
         <div class="project-image">
+
           <img
             src="images/sunflower-lanyard/sunflower-lanyard-hero.jpg"
             alt="Staring Right Back installation"
           >
+
         </div>
 
-        <h3>The Sunflower Lanyard — Staring Right Back</h3>
-        <p>Critical Design · Interactive Installation · 2025</p>
+
+        <div class="project-content">
+
+          <h3>The Sunflower Lanyard — Staring Right Back</h3>
+
+          <p class="project-meta">
+            Critical Design · Interactive Installation · 2025
+          </p>
+
+          <p class="project-description">
+            Investigating how the Sunflower Lanyard for invisible disabilities
+            is interpreted in public space — and how visibility can both support
+            and stigmatise.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Critical Design</span>
+
+              <span class="tag">HCI</span>
+
+              <span class="tag">Embodied Interaction</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- SUNFLOWER LANYARD WORKSHOP -->
@@ -269,16 +711,52 @@
       <a class="project" href="sunflower-lanyard-workshop.html">
 
         <div class="project-image">
+
           <img
             src="images/sunflower-lanyard-workshop/sunflower-lanyard-workshop-hero.jpg"
             alt="Sunflower Lanyard participatory workshop"
           >
+
         </div>
 
-        <h3>Sunflower Lanyard Workshop</h3>
-        <p>Participatory Workshop · Roskilde Festival · 2025</p>
+
+        <div class="project-content">
+
+          <h3>Sunflower Lanyard Workshop</h3>
+
+          <p class="project-meta">
+            Participatory Workshop · Roskilde Festival · 2025
+          </p>
+
+          <p class="project-description">
+            A co-creative workshop inviting participants to personalise the
+            Sunflower Lanyard and explore identity, visibility and ownership
+            through making.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Co-creation</span>
+
+              <span class="tag">Facilitation</span>
+
+              <span class="tag">Material Exploration</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
+
 
 
       <!-- VIKING SHIP MUSEUM -->
@@ -286,14 +764,49 @@
       <a class="project" href="viking-ship-museum-app.html">
 
         <div class="project-image">
+
           <img
             src="images/viking-ship-museum/viking-ship-museum-hero.jpg"
             alt="Viking Ship Museum mobile app"
           >
+
         </div>
 
-        <h3>Viking Ship Museum App</h3>
-        <p>Interaction Design · Digital Museum Experience · 2024</p>
+
+        <div class="project-content">
+
+          <h3>Viking Ship Museum App</h3>
+
+          <p class="project-meta">
+            Interaction Design · Digital Museum Experience · 2024
+          </p>
+
+          <p class="project-description">
+            A playful mobile museum experience combining QR-code interaction,
+            storytelling and historical learning through an interactive
+            treasure hunt.
+          </p>
+
+
+          <div class="project-bottom">
+
+            <div class="tags">
+
+              <span class="tag">Interaction Design</span>
+
+              <span class="tag">p5.js</span>
+
+              <span class="tag">User Testing</span>
+
+            </div>
+
+            <span class="view-project">
+              View project →
+            </span>
+
+          </div>
+
+        </div>
 
       </a>
 
@@ -303,17 +816,34 @@
   </main>
 
 
+
+  <!-- FOOTER -->
+
   <footer>
 
-  <span>© Aja Olufsen</span>
+    <span>
+      © Aja Olufsen
+    </span>
 
-  <span>
-    <a href="https://www.linkedin.com/in/aja-olufsen-85204328b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    &nbsp;&nbsp;
-    <a href="mailto:aja-olufsen@live.dk">Email</a>
-  </span>
+    <span>
 
-</footer>
+      <a
+        href="https://www.linkedin.com/in/aja-olufsen-85204328b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      &nbsp;&nbsp;
+
+      <a href="mailto:aja-olufsen@live.dk">
+        Email
+      </a>
+
+    </span>
+
+  </footer>
 
 
 </body>
