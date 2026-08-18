@@ -1,133 +1,265 @@
-index.html
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Aja Olufsen – Portfolio</title>
+  <title>Aja Olufsen — Portfolio</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f2;
-      color: #1d1d1d;
-    }
-
-    header {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 60px 10%;
-    }
-
-    h1 {
-      font-size: clamp(50px, 9vw, 110px);
-      margin: 0;
-      line-height: 0.95;
-    }
-
-    header p {
-      max-width: 650px;
-      font-size: 22px;
-      line-height: 1.5;
-    }
-
-    section {
-      padding: 80px 10%;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .project {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-    }
-
-    .project h3 {
-      font-size: 26px;
-      margin-top: 0;
-    }
-
-    footer {
-      padding: 50px 10%;
-      background: #1d1d1d;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 70px 40px 90px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 500;
+      letter-spacing: -3px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 17px;
+      color: #666;
+    }
+
+    /* PROJECTS */
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px 100px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0 0 30px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 30px;
+    }
+
+    .project {
+      display: block;
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #eeeeee;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.015);
+    }
+
+    .project h3 {
+      font-size: 19px;
+      font-weight: 500;
+      margin: 15px 0 5px;
+    }
+
+    .project p {
+      margin: 0;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 45px 20px 65px;
+      }
+
+      main {
+        padding: 0 20px 70px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      footer {
+        margin: 0 20px;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
   <header>
-    <p>Digital transformation · Interactive design · Technology</p>
-
-    <h1>Aja<br>Olufsen</h1>
-
-    <p>
-      Jeg arbejder med digital transformation, interaktive installationer
-      og teknologier, der skaber refleksion og engagement.
-    </p>
+    <h1>Aja Olufsen</h1>
+    <p>Digital Transformation · Interaction Design · Technology</p>
   </header>
 
-  <section>
-    <h2>Udvalgte projekter</h2>
+
+  <main>
+
+    <h2>Projects</h2>
 
     <div class="projects">
 
-      <article class="project">
-        <h3>Fremtidskonsultationen</h3>
-        <p>
-          En interaktiv robotlæge udviklet i samarbejde med Steno Museet.
-          Installationen undersøger prævention, ansvar og køn gennem
-          speculative og critical design.
-        </p>
-      </article>
 
-      <article class="project">
+      <!-- PRÆVENTIONSLINJEN -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
         <h3>Præventionslinjen</h3>
-        <p>
-          En interaktiv telefoninstallation til Roskilde Festival med lyd,
-          fysiske knapper, Arduino og anonym dataindsamling.
-        </p>
-      </article>
+        <p>Interactive Installation · Roskilde Festival</p>
+      </a>
 
-      <article class="project">
+
+      <!-- UNIT 12:2 -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Unit 12:2</h3>
+        <p>Interactive Design</p>
+      </a>
+
+
+      <!-- WORKSHOPMATERIALE -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Workshop Material — Contraceptive Methods</h3>
+        <p>Workshop Design · Educational Material</p>
+      </a>
+
+
+      <!-- BARNABÓKAKLUBBIN -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
         <h3>Barnabókaklubbin</h3>
-        <p>
-          Et digitaliseringsprojekt med analyse af arbejdsgange og forslag
-          til automatisering gennem RPA og Power Automate.
-        </p>
-      </article>
+        <p>Digitalisation · Process Optimisation · RPA</p>
+      </a>
+
+
+      <!-- JELLYFISH -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Jellyfish</h3>
+        <p>Interactive Design</p>
+      </a>
+
+
+      <!-- SOLSIKKESNOREN -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Solsikkesnoren</h3>
+        <p>Interaction Design</p>
+      </a>
+
+
+      <!-- SOLSIKKESNOREN WORKSHOP -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Solsikkesnoren — Workshop</h3>
+        <p>Workshop · Roskilde Festival</p>
+      </a>
+
+
+      <!-- VIKINGESKIBSMUSEET -->
+
+      <a class="project" href="#">
+        <div class="project-image"></div>
+
+        <h3>Viking Ship Museum</h3>
+        <p>App Prototype · UX/UI</p>
+      </a>
+
 
     </div>
-  </section>
 
-  <section>
-    <h2>Om mig</h2>
+  </main>
 
-    <p>
-      Jeg er cand.it. i Digital Transformation med specialisering i Digital
-      Design. Jeg kombinerer analyse, teknologi og design for at udvikle
-      digitale løsninger og interaktive oplevelser.
-    </p>
-  </section>
 
   <footer>
-    <h2>Kontakt</h2>
-    <p>Indsæt din e-mail og LinkedIn her.</p>
+
+    <span>© Aja Olufsen</span>
+
+    <span>
+      <a href="#">LinkedIn</a>
+      &nbsp;&nbsp;
+      <a href="mailto:aja-olufsen@live.dk">Email</a>
+    </span>
+
   </footer>
 
+
 </body>
+
 </html>
