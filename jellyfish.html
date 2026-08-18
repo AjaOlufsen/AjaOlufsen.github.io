@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Contraception Line  — Aja Olufsen</title>
+  <title>Jellyfish — Aja Olufsen</title>
 
   <style>
     * {
@@ -24,6 +24,7 @@
       color: inherit;
       text-decoration: none;
     }
+
 
     /* NAVIGATION */
 
@@ -50,6 +51,7 @@
       color: #111;
     }
 
+
     /* PROJECT HEADER */
 
     .project-header {
@@ -71,83 +73,96 @@
       font-size: 15px;
     }
 
+
     /* HERO IMAGE */
 
     .hero-image {
       max-width: 1200px;
-      height: 1000px;
+      height: 650px;
       margin: 0 auto;
       background: #eeeeee;
+      overflow: hidden;
     }
-  .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
 
     /* CONTENT */
 
     .content {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 140px 80px 160px;
     }
 
     .section {
-      margin-bottom: 80px;
+      margin-bottom: 110px;
     }
 
     .section h2 {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
       font-weight: 500;
-      margin: 0 0 20px;
+      margin: 0 0 32px;
     }
 
     .section p {
-      font-size: 18px;
-      margin: 0;
-      color: #333;
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 0 0 24px;
+      color: #555;
     }
 
-    /* IMAGE */
+
+    /* PROJECT IMAGES */
 
     .project-image {
       width: 100%;
-      height: 500px;
       background: #eeeeee;
-      margin: 60px 0;
+      margin: 100px 0;
+      overflow: hidden;
     }
+
     .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
 
     /* DETAILS */
 
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 80px;
       border-top: 1px solid #ddd;
-      padding-top: 30px;
+      padding-top: 40px;
+      margin-top: 130px;
     }
 
     .details h3 {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 18px;
     }
 
     .details p {
       font-size: 15px;
+      line-height: 1.8;
       color: #666;
+      margin: 0;
     }
+
 
     /* FOOTER */
 
@@ -164,6 +179,7 @@
       text-underline-offset: 3px;
     }
 
+
     /* MOBILE */
 
     @media (max-width: 700px) {
@@ -176,22 +192,35 @@
         padding: 70px 20px 50px;
       }
 
+      .project-header h1 {
+        letter-spacing: -2px;
+      }
+
       .hero-image {
         height: 350px;
         margin: 0 20px;
       }
 
       .content {
-        padding: 70px 20px;
+        padding: 80px 30px 100px;
+      }
+
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section p {
+        font-size: 16px;
       }
 
       .project-image {
-        height: 350px;
+        margin: 70px 0;
       }
 
       .details {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
+        margin-top: 90px;
       }
 
       footer {
@@ -199,12 +228,13 @@
         padding: 35px 0;
       }
     }
-  </style>
 
+  </style>
 </head>
 
 
 <body>
+
 
   <!-- NAVIGATION -->
 
@@ -221,93 +251,138 @@
   </nav>
 
 
-  <!-- PROJECT TITLE -->
+  <!-- PROJECT HEADER -->
 
   <header class="project-header">
 
-    <h1>The Contraception Line</h1>
+    <h1>Jellyfish</h1>
 
     <div class="project-meta">
-      Interactive Installation · Roskilde Festival · 2026
+      Interactive Light Installation · Roskilde Festival · 2025
     </div>
 
   </header>
 
 
-  <!-- MAIN IMAGE -->
+  <!-- HERO -->
 
   <div class="hero-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-hero.JPG" alt="Præventionslinjen interactive installation at Roskilde Festival">
-</div>
+
+    <img
+      src="images/jellyfish/jellyfish-hero.jpg"
+      alt="Jellyfish light installation at Roskilde Festival"
+    >
+
+  </div>
 
 
-  <!-- PROJECT CONTENT -->
+  <!-- CONTENT -->
 
   <main class="content">
 
+
+    <!-- ABOUT -->
 
     <section class="section">
 
       <h2>About</h2>
 
       <p>
-        The Contraception Line is an interactive installation developed for
-        Roskilde Festival. The project explores contraception, responsibility
-        and sexual health through an anonymous and playful interaction.
+        Jellyfish is an interactive light installation created for
+        Roskilde Festival 2025. The installation was designed as a
+        serene pause within the intensity of the festival environment.
+      </p>
+
+      <p>
+        Visitors were invited to slow down and experience calm through
+        light, tactile materials and subtle sensory interaction.
       </p>
 
     </section>
 
+
+    <!-- CONCEPT -->
 
     <section class="section">
 
-      <h2>The project</h2>
+      <h2>The Concept</h2>
 
       <p>
-        Visitors interact with the installation through a telephone receiver
-        and physical buttons. Through a short series of questions, the
-        installation collects anonymous responses and visualises the results.
+        We explored how light and embodied interaction could create a
+        momentary escape from the noise and energy of the festival.
+      </p>
+
+      <p>
+        Inspired by the calm, fluid movement of jellyfish, the
+        installation invited visitors to engage with its soft materials,
+        gentle movement and changing light. The intention was to create
+        a meditative sensory experience rather than demand attention.
       </p>
 
     </section>
 
 
-    <!-- IMAGE PLACEHOLDER -->
+    <!-- FESTIVAL IMAGE -->
 
     <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-interaction.JPG" alt="Visitor interacting with Præventionslinjen at Roskilde Festival">
-</div>
+
+      <img
+        src="images/jellyfish/jellyfish-festival.jpg"
+        alt="Jellyfish installation in the festival environment"
+      >
+
+    </div>
+
+
+    <!-- PROCESS -->
 
     <section class="section">
 
-      <h2>My role</h2>
+      <h2>From Sketch to Installation</h2>
 
       <p>
-        I worked on the concept, interaction design, physical prototyping
-        and technical development of the installation.
+        Through iterative prototyping and hands-on material exploration,
+        we developed the installation using yarn, bubble wrap, tulle,
+        NeoPixel LEDs and chicken wire.
+      </p>
+
+      <p>
+        The materials were chosen for their softness, transparency and
+        ability to diffuse light, helping create the flowing and organic
+        expression of the final installation.
       </p>
 
     </section>
 
 
+    <!-- SKETCH IMAGE -->
+
+    <div class="project-image">
+
+      <img
+        src="images/jellyfish/jellyfish-sketch.jpg"
+        alt="Early sketches and development of the Jellyfish installation"
+      >
+
+    </div>
+
+
+    <!-- EXPERIENCE -->
+
     <section class="section">
 
-      <h2>Process</h2>
+      <h2>Experience</h2>
 
       <p>
-        The project involved concept development, prototyping, testing and
-        iterative development of both the physical and digital interaction.
+        The final installation created a small sensory space within the
+        festival environment where visitors could pause, breathe and
+        engage with the work at their own pace.
       </p>
 
     </section>
 
 
-    <!-- IMAGE PLACEHOLDER -->
-
-   <div class="project-image">
-  <img src="images/praeventionslinjen/praeventionslinjen-prototyping.JPG" alt="Prototyping the electronics for Præventionslinjen">
-</div>
-
+    <!-- DETAILS -->
 
     <div class="details">
 
@@ -316,9 +391,10 @@
         <h3>Methods</h3>
 
         <p>
-          Interaction Design<br>
-          Prototyping<br>
-          User Testing
+          Iterative Prototyping<br>
+          Material Exploration<br>
+          Embodied Interaction<br>
+          Interaction Design
         </p>
 
       </div>
@@ -326,13 +402,14 @@
 
       <div>
 
-        <h3>Technology</h3>
+        <h3>Technology & Materials</h3>
 
         <p>
-          Arduino<br>
+          NeoPixel LEDs<br>
           Physical Computing<br>
-          Audio<br>
-          LCD Display
+          Yarn & Tulle<br>
+          Bubble Wrap<br>
+          Chicken Wire
         </p>
 
       </div>
@@ -342,6 +419,8 @@
 
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
