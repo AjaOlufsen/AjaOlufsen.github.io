@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
       line-height: 1.6;
     }
@@ -25,135 +25,205 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 35px 40px;
+      padding: 34px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
     .back {
       font-size: 14px;
-      color: #666;
+      color: #777;
     }
 
     .back:hover {
       color: #111;
     }
 
-    /* PROJECT HEADER */
+    /* HEADER */
 
     .project-header {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 100px 40px 70px;
+      padding: 90px 40px 60px;
     }
 
     .project-header h1 {
-      font-size: clamp(45px, 7vw, 85px);
+      margin: 0 0 26px;
+      max-width: 1050px;
+
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 0 0 25px;
+      letter-spacing: -4px;
+      line-height: 0.98;
     }
 
     .project-meta {
-      color: #777;
       font-size: 15px;
+      color: #777;
+      margin-bottom: 28px;
+    }
+
+    .project-intro {
+      max-width: 780px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #4d4d4d;
+      margin: 0 0 30px;
+    }
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d6;
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #666;
     }
 
     /* HERO */
 
-    .hero-image {
-      max-width: 1200px;
-      height: 650px;
-      margin: 0 auto;
-      background: #eeeeee;
-      overflow: hidden;
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto 120px;
+      padding: 0 40px;
     }
 
-    .hero-image img {
+    .hero img {
       width: 100%;
-      height: 100%;
+      height: 620px;
       object-fit: cover;
       display: block;
+      border-radius: 18px;
     }
 
     /* CONTENT */
 
-    .content {
-      max-width: 1000px;
+    main {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 140px 80px 160px;
+      padding: 0 40px 130px;
     }
 
-    .section {
-      margin-bottom: 110px;
-    }
-
-    .section h2 {
-      font-size: 13px;
+    .section-label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.6px;
+      color: #8a8a8a;
+      margin-bottom: 18px;
+    }
+
+    .text-block h2 {
+      font-size: clamp(30px, 3.2vw, 46px);
       font-weight: 500;
-      margin: 0 0 32px;
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin: 0 0 26px;
     }
 
-    .section p {
-      max-width: 720px;
+    .text-block p {
       font-size: 17px;
-      line-height: 1.8;
-      margin: 0 0 24px;
-      color: #555;
+      line-height: 1.75;
+      color: #4b4b4b;
+      margin: 0 0 20px;
     }
 
-    /* LARGE STATEMENT */
+    /* INTRO */
 
-    .highlight {
-      max-width: 760px;
-      font-size: clamp(27px, 3vw, 38px);
-      line-height: 1.35;
-      letter-spacing: -1px;
-      color: #111;
+    .intro-section {
+      max-width: 800px;
+      margin: 0 0 130px;
+    }
+
+    /* VIDEO SECTION */
+
+    .video-section {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
+      align-items: center;
       margin: 130px 0;
     }
 
-    /* VIDEO */
-
-    .project-video {
+    .video-wrap {
       width: 100%;
-      margin: 100px 0;
+      overflow: hidden;
+      border-radius: 16px;
       background: #000;
     }
 
-    .project-video video {
+    .video-wrap video {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* PROJECT IMAGE */
+    /* SPLIT SECTIONS */
 
-    .project-image {
-      width: 100%;
-      margin: 100px 0;
-      overflow: hidden;
-      background: #eeeeee;
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin: 130px 0;
     }
 
-    .project-image img {
+    .split-section.reverse .media {
+      order: 2;
+    }
+
+    .split-section.reverse .text-block {
+      order: 1;
+    }
+
+    .media img {
       width: 100%;
-      height: auto;
+      height: 500px;
+      object-fit: cover;
       display: block;
+      border-radius: 16px;
+    }
+
+    /* RESEARCH / ROLE */
+
+    .dual-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      margin: 130px 0;
+      padding-top: 70px;
+      border-top: 1px solid #dcdcd8;
+    }
+
+    .dual-text h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin: 0 0 20px;
+    }
+
+    .dual-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+      margin: 0 0 18px;
     }
 
     /* DETAILS */
@@ -161,9 +231,9 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      border-top: 1px solid #ddd;
-      padding-top: 40px;
+      gap: 70px;
+      padding-top: 50px;
+      border-top: 1px solid #dcdcd8;
       margin-top: 130px;
     }
 
@@ -172,7 +242,7 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-weight: 500;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
     }
 
     .details p {
@@ -185,11 +255,14 @@
     /* FOOTER */
 
     footer {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 50px 40px;
-      border-top: 1px solid #ddd;
+      padding: 40px;
+      border-top: 1px solid #dcdcd8;
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -199,45 +272,61 @@
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 25px 20px;
+        padding: 24px 20px;
       }
 
       .project-header {
-        padding: 70px 20px 50px;
+        padding: 65px 20px 45px;
       }
 
       .project-header h1 {
-        letter-spacing: -2px;
+        letter-spacing: -2.5px;
       }
 
-      .hero-image {
-        height: 350px;
-        margin: 0 20px;
+      .project-intro {
+        font-size: 18px;
       }
 
-      .content {
-        padding: 80px 30px 100px;
+      .hero {
+        padding: 0 20px;
+        margin-bottom: 85px;
       }
 
-      .section {
-        margin-bottom: 80px;
+      .hero img {
+        height: 390px;
       }
 
-      .section p {
-        font-size: 16px;
+      main {
+        padding: 0 20px 90px;
       }
 
-      .highlight {
+      .intro-section {
+        margin-bottom: 90px;
+      }
+
+      .video-section,
+      .split-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
         margin: 90px 0;
-        font-size: 27px;
       }
 
-      .project-video,
-      .project-image {
-        margin: 70px 0;
+      .split-section.reverse .media,
+      .split-section.reverse .text-block {
+        order: initial;
+      }
+
+      .media img {
+        height: 360px;
+      }
+
+      .dual-text {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin: 90px 0;
       }
 
       .details {
@@ -248,7 +337,9 @@
 
       footer {
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
       }
     }
 
@@ -257,160 +348,242 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
 
   <nav>
-    <a class="name" href="index.html">
-      Aja Olufsen
-    </a>
-
-    <a class="back" href="index.html">
-      ← Back to projects
-    </a>
+    <a class="name" href="index.html">Aja Olufsen</a>
+    <a class="back" href="index.html">← Back to projects</a>
   </nav>
 
-  <!-- PROJECT HEADER -->
+  <!-- HEADER -->
 
   <header class="project-header">
 
-    <h1>The Sunflower Lanyard</h1>
+    <h1>The Sunflower Lanyard — Staring Right Back</h1>
 
     <div class="project-meta">
       Critical Design · Interactive Installation · Research through Design · 2025
+    </div>
+
+    <p class="project-intro">
+      A critical design project exploring how visibility can both support
+      and stigmatise people with invisible disabilities — and how design
+      can turn the social gaze back towards the observer.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Critical Design</span>
+      <span class="tag">Research through Design</span>
+      <span class="tag">Embodied Interaction</span>
+      <span class="tag">HCI</span>
     </div>
 
   </header>
 
   <!-- HERO -->
 
-  <div class="hero-image">
+  <div class="hero">
+
     <img
       src="images/sunflower-lanyard/sunflower-lanyard-hero.jpg"
       alt="The Sunflower Lanyard critical design project"
     >
+
   </div>
 
   <!-- CONTENT -->
 
-  <main class="content">
+  <main>
 
     <!-- ABOUT -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>About</h2>
+      <div class="section-label">About</div>
+
+      <h2>
+        When a symbol designed to create understanding also changes
+        how a person is seen.
+      </h2>
 
       <p>
         The project explored how the Sunflower Lanyard functions as a social
         symbol for invisible disabilities, and how visibility can both create
-        understanding and contribute to stigma, judgement and social categorisation.
+        understanding and contribute to stigma, judgement and social
+        categorisation.
       </p>
 
       <p>
-        Rather than redesigning the lanyard as a product, we used Critical Design
-        and Research through Design to investigate how stigma could be made visible,
-        felt and reflected back to the people observing it.
+        Rather than redesigning the lanyard as a product, we used Critical
+        Design and Research through Design to investigate how stigma could
+        be made visible, felt and reflected back to the people observing it.
       </p>
 
     </section>
 
-    <!-- STARING RIGHT BACK -->
+    <!-- VIDEO / STARING RIGHT BACK -->
 
-    <section class="section">
+    <section class="video-section">
 
-      <h2>Staring Right Back</h2>
+      <div class="video-wrap">
 
-      <p>
-        Staring Right Back was developed as an immersive installation that
-        explored the bodily experience of being watched, judged and socially
-        exposed.
-      </p>
+        <video controls playsinline preload="metadata">
+          <source
+            src="images/sunflower-lanyard/sunflower-lanyard-video.mp4"
+            type="video/mp4"
+          >
+          Your browser does not support video playback.
+        </video>
 
-      <p>
-        Projected eyes and recorded voices turned the gaze towards the participant,
-        shifting them from observer to observed. The intention was not simply to
-        explain stigma, but to create a situation in which it could be experienced
-        through the body.
-      </p>
+      </div>
+
+      <div class="text-block">
+
+        <div class="section-label">Staring Right Back</div>
+
+        <h2>
+          Turning the observer into the observed.
+        </h2>
+
+        <p>
+          Staring Right Back was developed as an immersive installation
+          exploring the bodily experience of being watched, judged and
+          socially exposed.
+        </p>
+
+        <p>
+          Projected eyes and recorded voices turn the gaze towards the
+          participant, shifting their position from observer to observed.
+        </p>
+
+        <p>
+          The intention was not simply to explain stigma, but to create
+          a situation in which elements of that experience could be felt
+          through the body.
+        </p>
+
+      </div>
 
     </section>
-
-    <!-- VIDEO -->
-
-    <div class="project-video">
-
-      <video controls playsinline preload="metadata">
-        <source
-          src="images/sunflower-lanyard/sunflower-lanyard-video.mp4"
-          type="video/mp4"
-        >
-        Your browser does not support video playback.
-      </video>
-
-    </div>
 
     <!-- EMBODIED MIRRORING -->
 
-    <section class="section">
+    <section class="split-section">
 
-      <h2>Embodied Mirroring</h2>
+      <div class="media">
 
-      <p>
-        Through the project we developed the concept of Embodied Mirroring:
-        a design approach in which participants do not only engage physically
-        with an experience, but are placed in a situation that mirrors another
-        person's embodied experience.
-      </p>
+        <img
+          src="images/sunflower-lanyard/sunflower-lanyard-experience.jpg"
+          alt="Staring Right Back immersive installation"
+        >
 
-      <p>
-        In Staring Right Back, this meant turning the experience of being stared
-        at back towards the observer, using sensory and affective interaction to
-        create space for recognition, empathy and reflection.
-      </p>
+      </div>
 
-    </section>
+      <div class="text-block">
 
-    <!-- EXPERIENCE IMAGE -->
+        <div class="section-label">Embodied Mirroring</div>
 
-    <div class="project-image">
+        <h2>
+          Designing reflection through a bodily role reversal.
+        </h2>
 
-      <img
-        src="images/sunflower-lanyard/sunflower-lanyard-experience.jpg"
-        alt="Staring Right Back immersive installation"
-      >
+        <p>
+          Through the project we developed the concept of Embodied Mirroring:
+          a design approach in which participants do not only engage physically
+          with an experience, but are placed in a situation that mirrors
+          another person's embodied experience.
+        </p>
 
-    </div>
+        <p>
+          In Staring Right Back, the experience of being stared at is turned
+          towards the observer through sensory and affective interaction.
+        </p>
 
-    <!-- PROCESS -->
+        <p>
+          The aim is to create space for recognition, empathy and
+          self-reflection through the participant's own bodily experience.
+        </p>
 
-    <section class="section">
-
-      <h2>Research & Process</h2>
-
-      <p>
-        The project developed through exploratory experiments, prototyping and
-        iterative testing. Early studies investigated how the Sunflower Lanyard
-        influenced first impressions and social interpretation.
-      </p>
-
-      <p>
-        These insights informed increasingly embodied design experiments, moving
-        from observation and interviews towards critical installations that used
-        discomfort, visibility and role reversal as design material.
-      </p>
+      </div>
 
     </section>
 
-    <!-- INSTALLATION IMAGE -->
+    <!-- RESEARCH / PROCESS -->
 
-    <div class="project-image">
+    <section class="dual-text">
 
-      <img
-        src="images/sunflower-lanyard/sunflower-lanyard-installation.jpg"
-        alt="Physical setup of the Staring Right Back installation"
-      >
+      <div>
 
-    </div>
+        <h3>Research & process</h3>
+
+        <p>
+          The project developed through exploratory experiments,
+          prototyping and iterative testing.
+        </p>
+
+        <p>
+          Early studies investigated how the Sunflower Lanyard influenced
+          first impressions and social interpretation before the work moved
+          towards increasingly embodied design experiments.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Design approach</h3>
+
+        <p>
+          The project used discomfort, visibility and role reversal as
+          design material rather than attempting to solve stigma through
+          a conventional product intervention.
+        </p>
+
+        <p>
+          Prototypes were treated as questions that could make invisible
+          social dynamics physically and emotionally present.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- INSTALLATION -->
+
+    <section class="split-section reverse">
+
+      <div class="media">
+
+        <img
+          src="images/sunflower-lanyard/sunflower-lanyard-installation.jpg"
+          alt="Physical setup of the Staring Right Back installation"
+        >
+
+      </div>
+
+      <div class="text-block">
+
+        <div class="section-label">The installation</div>
+
+        <h2>
+          Translating a social experience into an immersive environment.
+        </h2>
+
+        <p>
+          Projection, interactive visuals and audio were combined to create
+          an environment in which the participant became the focus of
+          attention.
+        </p>
+
+        <p>
+          The physical setup was designed to intensify the sensation of
+          exposure and make the relationship between looking and being
+          looked at difficult to ignore.
+        </p>
+
+      </div>
+
+    </section>
 
     <!-- DETAILS -->
 
@@ -452,6 +625,8 @@
   <!-- FOOTER -->
 
   <footer>
+
+    <span>© Aja Olufsen</span>
 
     <a href="index.html">
       ← Back to all projects
