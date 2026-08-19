@@ -74,7 +74,7 @@
     }
 
     .project-intro {
-      max-width: 780px;
+      max-width: 800px;
       font-size: 21px;
       line-height: 1.55;
       color: #4d4d4d;
@@ -102,13 +102,13 @@
 
     .hero {
       max-width: 1120px;
-      margin: 0 auto 120px;
+      margin: 0 auto 90px;
       padding: 0 40px;
     }
 
     .hero img {
       width: 100%;
-      height: 620px;
+      height: 580px;
       object-fit: contain;
       display: block;
       background: #000;
@@ -123,95 +123,99 @@
       padding: 0 40px 130px;
     }
 
-    .section-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      color: #8a8a8a;
-      margin-bottom: 18px;
-    }
+    /* CASE GRID */
 
-    .text-block h2 {
-      font-size: clamp(30px, 3.2vw, 46px);
-      font-weight: 500;
-      line-height: 1.08;
-      letter-spacing: -1.7px;
-      margin: 0 0 26px;
-    }
-
-    .text-block p {
-      font-size: 17px;
-      line-height: 1.75;
-      color: #4b4b4b;
-      margin: 0 0 20px;
-    }
-
-    /* INTRO */
-
-    .intro-section {
-      max-width: 800px;
-      margin: 0 0 130px;
-    }
-
-    /* SPLIT SECTIONS */
-
-    .split-section {
+    .case-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-      margin: 130px 0;
+      grid-template-columns: 1.55fr 0.95fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 26px;
     }
 
-    .split-section.reverse .media {
-      order: 2;
+    .left-stack,
+    .right-stack {
+      display: grid;
+      gap: 26px;
     }
 
-    .split-section.reverse .text-block {
-      order: 1;
+    /* CARDS */
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dededb;
+      border-radius: 18px;
+      padding: 34px 36px;
     }
 
-    .media img {
+    .card h2 {
+      margin: 0 0 22px;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.4px;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #4e4e4e;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .small-card p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    .small-card strong {
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* FEATURE IMAGE */
+
+    .feature-image {
+      width: 100%;
+      margin: 70px 0;
+    }
+
+    .feature-image img {
       width: 100%;
       height: 500px;
       object-fit: cover;
       display: block;
-      border-radius: 16px;
+      border-radius: 18px;
     }
 
-    /* DUAL TEXT */
+    /* TWO CARDS */
 
-    .dual-text {
+    .two-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      margin: 130px 0;
-      padding-top: 70px;
-      border-top: 1px solid #dcdcd8;
-    }
-
-    .dual-text h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin: 0 0 20px;
-    }
-
-    .dual-text p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #555;
-      margin: 0 0 18px;
+      gap: 26px;
+      margin: 26px 0 70px;
     }
 
     /* HIGHLIGHT */
 
-    .highlight {
+    .highlight-card {
+      background: #111111;
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 55px 60px;
+      margin: 70px 0;
+    }
+
+    .highlight-card p {
       max-width: 820px;
-      margin: 150px 0;
-      font-size: clamp(34px, 4.5vw, 60px);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      font-weight: 500;
+      margin: 0;
+      font-size: clamp(27px, 3vw, 40px);
+      line-height: 1.25;
+      letter-spacing: -1.2px;
     }
 
     /* DETAILS */
@@ -219,25 +223,8 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      padding-top: 50px;
-      border-top: 1px solid #dcdcd8;
-      margin-top: 130px;
-    }
-
-    .details h3 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 500;
-      margin: 0 0 16px;
-    }
-
-    .details p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #666;
-      margin: 0;
+      gap: 26px;
+      margin-top: 70px;
     }
 
     /* FOOTER */
@@ -280,51 +267,38 @@
 
       .hero {
         padding: 0 20px;
-        margin-bottom: 85px;
+        margin-bottom: 65px;
       }
 
       .hero img {
-        height: 390px;
+        height: 380px;
       }
 
       main {
         padding: 0 20px 90px;
       }
 
-      .intro-section {
-        margin-bottom: 90px;
-      }
-
-      .split-section {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        margin: 90px 0;
-      }
-
-      .split-section.reverse .media,
-      .split-section.reverse .text-block {
-        order: initial;
-      }
-
-      .media img {
-        height: 360px;
-      }
-
-      .dual-text {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        margin: 90px 0;
-      }
-
-      .highlight {
-        margin: 100px 0;
-        font-size: 36px;
-      }
-
+      .case-grid,
+      .two-cards,
       .details {
         grid-template-columns: 1fr;
-        gap: 35px;
-        margin-top: 90px;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .feature-image {
+        margin: 50px 0;
+      }
+
+      .feature-image img {
+        height: 350px;
+      }
+
+      .highlight-card {
+        padding: 38px 30px;
+        margin: 50px 0;
       }
 
       footer {
@@ -358,7 +332,7 @@
     </div>
 
     <p class="project-intro">
-      A playful digital museum experience combining QR-code interaction,
+      A playful mobile museum experience combining QR-code interaction,
       exploration and historical storytelling through an interactive
       treasure hunt.
     </p>
@@ -368,6 +342,7 @@
       <span class="tag">Design Sprint 2.0</span>
       <span class="tag">p5.js</span>
       <span class="tag">User Testing</span>
+      <span class="tag">Digital Prototyping</span>
     </div>
 
   </header>
@@ -387,66 +362,93 @@
 
   <main>
 
-    <!-- ABOUT -->
+    <!-- TOP GRID -->
 
-    <section class="intro-section text-block">
+    <section class="case-grid">
 
-      <div class="section-label">About</div>
+      <div class="left-stack">
 
-      <h2>
-        Exploring how digital interaction could make a museum visit
-        more active, playful and engaging.
-      </h2>
+        <div class="card">
 
-      <p>
-        The project was developed around a case from the Viking Ship Museum
-        in Roskilde, which wanted to explore new ways of communicating
-        activities, information and historical content through digital technology.
-      </p>
+          <h2>Context</h2>
 
-      <p>
-        We focused on how a mobile experience could motivate visitors to move
-        through the museum and actively discover content rather than receive
-        information passively.
-      </p>
+          <p>
+            The project was developed around a case from the Viking Ship Museum
+            in Roskilde, which wanted to explore new ways of communicating
+            activities, information and historical content through digital technology.
+          </p>
 
-    </section>
+          <p>
+            We focused on how a mobile experience could make the museum visit
+            more active and engaging by encouraging visitors to explore physical
+            locations rather than only receive information passively.
+          </p>
 
-    <!-- CHALLENGE / CONCEPT -->
+        </div>
 
-    <section class="dual-text">
+        <div class="card">
 
-      <div>
+          <h2>The challenge</h2>
 
-        <div class="section-label">The challenge</div>
+          <p>
+            Existing information displays could be difficult for international
+            visitors to interpret, while some parts of the museum needed alternative
+            ways of communicating historical knowledge when staff were not present.
+          </p>
 
-        <h3>Making museum information easier to discover and engage with.</h3>
+          <p>
+            The design challenge therefore became how to connect historical learning
+            with exploration, movement and playful interaction.
+          </p>
 
-        <p>
-          Existing information displays could be difficult for international
-          visitors to interpret, while some areas of the museum required
-          alternative ways of communicating historical knowledge when staff
-          were not present.
-        </p>
+        </div>
 
       </div>
 
-      <div>
+      <div class="right-stack">
 
-        <div class="section-label">The concept</div>
+        <div class="card small-card">
 
-        <h3>Turning the museum visit into an interactive treasure hunt.</h3>
+          <h2>Project snapshot</h2>
 
-        <p>
-          The concept evolved into a mobile experience aimed primarily
-          at younger visitors.
-        </p>
+          <p>
+            <strong>Year:</strong> 2024
+          </p>
 
-        <p>
-          Guests could scan QR codes positioned throughout the museum,
-          meet animated Viking characters and complete missions to unlock
-          the next part of the experience.
-        </p>
+          <p>
+            <strong>Case:</strong> Viking Ship Museum, Roskilde
+          </p>
+
+          <p>
+            <strong>Type:</strong> Digital museum experience
+          </p>
+
+          <p>
+            <strong>Outcome:</strong> Interactive mobile prototype
+          </p>
+
+          <p>
+            <strong>Focus:</strong> Play, navigation & learning
+          </p>
+
+        </div>
+
+        <div class="card small-card">
+
+          <h2>Methods & tools</h2>
+
+          <p>
+            <strong>Methods:</strong><br>
+            Design Sprint 2.0, speculative design,
+            storyboarding, prototyping and user testing
+          </p>
+
+          <p>
+            <strong>Technology:</strong><br>
+            p5.js, QR-code interaction and digital prototyping
+          </p>
+
+        </div>
 
       </div>
 
@@ -454,74 +456,157 @@
 
     <!-- HIGHLIGHT -->
 
-    <div class="highlight">
-      How can learning feel like exploration rather than instruction?
+    <div class="highlight-card">
+
+      <p>
+        How can learning feel like exploration rather than instruction?
+      </p>
+
     </div>
 
-    <!-- PROTOTYPE -->
+    <!-- CONCEPT -->
 
-    <section class="split-section">
+    <section class="two-cards">
 
-      <div class="media">
+      <div class="card">
 
-        <img
-          src="images/viking-ship-museum/viking-ship-museum-prototype.jpg"
-          alt="Early prototype of the Viking Ship Museum app"
-        >
+        <h2>The concept</h2>
+
+        <p>
+          The concept evolved into a mobile treasure hunt aimed primarily
+          at younger visitors.
+        </p>
+
+        <p>
+          Guests could scan QR codes positioned throughout the museum,
+          meet animated Viking characters and complete missions to progress
+          through the experience.
+        </p>
 
       </div>
 
-      <div class="text-block">
+      <div class="card">
 
-        <div class="section-label">Design process</div>
-
-        <h2>
-          Moving from speculative ideas towards a testable museum experience.
-        </h2>
+        <h2>Physical + digital interaction</h2>
 
         <p>
-          The project developed through several iterations, beginning with
-          speculative design and the question: What if Vikings still existed
-          in contemporary society?
+          The app was not designed as a standalone screen experience.
         </p>
 
         <p>
-          This exploration gradually moved towards a more concrete experience.
-          We used ideation, storyboarding and Design Sprint 2.0 to develop the
-          interaction and explore different combinations of navigation,
-          storytelling and play.
-        </p>
-
-        <p>
-          A functional prototype was developed with a particular focus on
-          QR-code interaction as the connection between the physical museum
-          and the digital experience.
+          QR codes linked the interface to physical museum locations,
+          making movement through the exhibition part of the interaction itself.
         </p>
 
       </div>
 
     </section>
 
-    <!-- USER TESTING -->
+    <!-- PROTOTYPE IMAGE -->
 
-    <section class="split-section reverse">
+    <div class="feature-image">
 
-      <div class="media">
+      <img
+        src="images/viking-ship-museum/viking-ship-museum-prototype.jpg"
+        alt="Early prototype of the Viking Ship Museum app"
+      >
 
-        <img
-          src="images/viking-ship-museum/viking-ship-museum-user-testing.jpg"
-          alt="User testing of the Viking Ship Museum app"
-        >
+    </div>
+
+    <!-- PROCESS -->
+
+    <section class="case-grid">
+
+      <div class="left-stack">
+
+        <div class="card">
+
+          <h2>Design process</h2>
+
+          <p>
+            The project developed through several iterations, beginning with
+            speculative design and the question: What if Vikings still existed
+            in contemporary society?
+          </p>
+
+          <p>
+            This exploration gradually moved towards a more concrete museum
+            experience through ideation, storyboarding and Design Sprint 2.0.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Prototype development</h2>
+
+          <p>
+            A functional prototype was developed with particular focus on
+            the QR-code interaction.
+          </p>
+
+          <p>
+            This became the central connection between the museum's physical
+            environment and the digital experience.
+          </p>
+
+        </div>
 
       </div>
 
-      <div class="text-block">
+      <div class="right-stack">
 
-        <div class="section-label">User testing</div>
+        <div class="card small-card">
 
-        <h2>
-          Testing whether play and learning could work as one experience.
-        </h2>
+          <h2>Interaction flow</h2>
+
+          <p>
+            Download app<br>
+            Explore museum<br>
+            Scan QR code<br>
+            Meet Viking character<br>
+            Complete mission<br>
+            Unlock next location
+          </p>
+
+        </div>
+
+        <div class="card small-card">
+
+          <h2>Design goals</h2>
+
+          <p>
+            Accessible<br>
+            Playful<br>
+            Exploratory<br>
+            Educational<br>
+            Location-based
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- USER TESTING IMAGE -->
+
+    <div class="feature-image">
+
+      <img
+        src="images/viking-ship-museum/viking-ship-museum-user-testing.jpg"
+        alt="User testing of the Viking Ship Museum app"
+      >
+
+    </div>
+
+    <!-- TESTING -->
+
+    <section class="two-cards">
+
+      <div class="card">
+
+        <h2>User testing</h2>
 
         <p>
           The prototype was tested with users and museum staff to evaluate
@@ -530,40 +615,26 @@
 
         <p>
           Participants responded positively to the interactive treasure hunt,
-          particularly the animated Viking characters and the use of QR codes
-          to progress through the experience.
-        </p>
-
-        <p>
-          The testing helped refine the balance between entertainment and
-          historical learning, so information felt integrated into the activity
-          rather than added afterwards.
+          particularly the animated Viking characters and the QR-code interaction.
         </p>
 
       </div>
 
-    </section>
+      <div class="card">
 
-    <!-- DESIGN APPROACH -->
+        <h2>Design refinement</h2>
 
-    <section class="intro-section text-block">
+        <p>
+          Testing helped us refine the relationship between entertainment
+          and historical learning.
+        </p>
 
-      <div class="section-label">Design approach</div>
+        <p>
+          The aim was to make information feel integrated into the activity
+          rather than something added on top of the interaction.
+        </p>
 
-      <h2>
-        Connecting the digital interface to movement through the physical museum.
-      </h2>
-
-      <p>
-        The app was not designed as a standalone screen experience.
-        The QR-code interaction made the museum itself part of the interface,
-        requiring visitors to move, discover and interact with physical locations.
-      </p>
-
-      <p>
-        This relationship between physical exploration and digital feedback
-        became central to the concept.
-      </p>
+      </div>
 
     </section>
 
@@ -571,9 +642,9 @@
 
     <div class="details">
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Methods</h3>
+        <h2>Methods</h2>
 
         <p>
           Research through Design<br>
@@ -586,9 +657,9 @@
 
       </div>
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Technology & Design</h3>
+        <h2>Technology & Design</h2>
 
         <p>
           Mobile Interaction<br>
