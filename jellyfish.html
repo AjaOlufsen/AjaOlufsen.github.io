@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
       line-height: 1.6;
     }
@@ -25,126 +25,167 @@
       text-decoration: none;
     }
 
-
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 35px 40px;
+      padding: 34px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
     .back {
       font-size: 14px;
-      color: #666;
+      color: #777;
     }
 
     .back:hover {
       color: #111;
     }
 
-
-    /* PROJECT HEADER */
+    /* HEADER */
 
     .project-header {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 100px 40px 70px;
+      padding: 90px 40px 60px;
     }
 
     .project-header h1 {
-      font-size: clamp(45px, 7vw, 85px);
+      margin: 0 0 26px;
+      max-width: 1000px;
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 0 0 25px;
+      letter-spacing: -4px;
+      line-height: 0.98;
     }
 
     .project-meta {
-      color: #777;
       font-size: 15px;
+      color: #777;
+      margin-bottom: 28px;
     }
 
-
-    /* HERO IMAGE */
-
-    .hero-image {
-      max-width: 1200px;
-      height: 650px;
-      margin: 0 auto;
-      background: #eeeeee;
-      overflow: hidden;
+    .project-intro {
+      max-width: 760px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #4d4d4d;
+      margin: 0 0 30px;
     }
 
-    .hero-image img {
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d6;
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto 120px;
+      padding: 0 40px;
+    }
+
+    .hero img {
       width: 100%;
-      height: 100%;
+      height: 620px;
       object-fit: cover;
       display: block;
+      border-radius: 18px;
     }
-
 
     /* CONTENT */
 
-    .content {
-      max-width: 1000px;
+    main {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 140px 80px 160px;
+      padding: 0 40px 130px;
     }
 
-    .section {
-      margin-bottom: 110px;
-    }
-
-    .section h2 {
-      font-size: 13px;
+    .section-label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.6px;
+      color: #8a8a8a;
+      margin-bottom: 18px;
+    }
+
+    .text-block h2 {
+      font-size: clamp(30px, 3.2vw, 46px);
       font-weight: 500;
-      margin: 0 0 32px;
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin: 0 0 26px;
     }
 
-    .section p {
-      max-width: 720px;
+    .text-block p {
       font-size: 17px;
-      line-height: 1.8;
-      margin: 0 0 24px;
-      color: #555;
+      line-height: 1.75;
+      color: #4b4b4b;
+      margin: 0 0 20px;
     }
 
+    /* INTRO */
 
-    /* PROJECT IMAGES */
-
-    .project-image {
-      width: 100%;
-      background: #eeeeee;
-      margin: 100px 0;
-      overflow: hidden;
+    .intro-section {
+      max-width: 800px;
+      margin: 0 0 130px;
     }
 
-    .project-image img {
+    /* SPLIT SECTIONS */
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin: 130px 0;
+    }
+
+    .split-section.reverse .media {
+      order: 2;
+    }
+
+    .split-section.reverse .text-block {
+      order: 1;
+    }
+
+    .media img {
       width: 100%;
-      height: auto;
+      height: 500px;
+      object-fit: cover;
       display: block;
+      border-radius: 16px;
     }
-
 
     /* DETAILS */
 
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      border-top: 1px solid #ddd;
-      padding-top: 40px;
+      gap: 70px;
+      padding-top: 50px;
+      border-top: 1px solid #dcdcd8;
       margin-top: 130px;
     }
 
@@ -153,7 +194,7 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-weight: 500;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
     }
 
     .details p {
@@ -163,15 +204,17 @@
       margin: 0;
     }
 
-
     /* FOOTER */
 
     footer {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 50px 40px;
-      border-top: 1px solid #ddd;
+      padding: 40px;
+      border-top: 1px solid #dcdcd8;
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -179,42 +222,56 @@
       text-underline-offset: 3px;
     }
 
-
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 25px 20px;
+        padding: 24px 20px;
       }
 
       .project-header {
-        padding: 70px 20px 50px;
+        padding: 65px 20px 45px;
       }
 
       .project-header h1 {
-        letter-spacing: -2px;
+        letter-spacing: -2.5px;
       }
 
-      .hero-image {
-        height: 350px;
-        margin: 0 20px;
+      .project-intro {
+        font-size: 18px;
       }
 
-      .content {
-        padding: 80px 30px 100px;
+      .hero {
+        padding: 0 20px;
+        margin-bottom: 85px;
       }
 
-      .section {
-        margin-bottom: 80px;
+      .hero img {
+        height: 390px;
       }
 
-      .section p {
-        font-size: 16px;
+      main {
+        padding: 0 20px 90px;
       }
 
-      .project-image {
-        margin: 70px 0;
+      .intro-section {
+        margin-bottom: 90px;
+      }
+
+      .split-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 90px 0;
+      }
+
+      .split-section.reverse .media,
+      .split-section.reverse .text-block {
+        order: initial;
+      }
+
+      .media img {
+        height: 360px;
       }
 
       .details {
@@ -225,33 +282,25 @@
 
       footer {
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
       }
     }
 
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- NAVIGATION -->
+  <!-- NAV -->
 
   <nav>
-
-    <a class="name" href="index.html">
-      Aja Olufsen
-    </a>
-
-    <a class="back" href="index.html">
-      ← Back to projects
-    </a>
-
+    <a class="name" href="index.html">Aja Olufsen</a>
+    <a class="back" href="index.html">← Back to projects</a>
   </nav>
 
-
-  <!-- PROJECT HEADER -->
+  <!-- HEADER -->
 
   <header class="project-header">
 
@@ -261,12 +310,23 @@
       Interactive Light Installation · Roskilde Festival · 2025
     </div>
 
-  </header>
+    <p class="project-intro">
+      A sensory light installation designed to create a quiet,
+      meditative pause within the intensity of Roskilde Festival.
+    </p>
 
+    <div class="tags">
+      <span class="tag">Embodied Interaction</span>
+      <span class="tag">Physical Computing</span>
+      <span class="tag">Material Exploration</span>
+      <span class="tag">Prototyping</span>
+    </div>
+
+  </header>
 
   <!-- HERO -->
 
-  <div class="hero-image">
+  <div class="hero">
 
     <img
       src="images/jellyfish/jellyfish-hero.jpg"
@@ -275,112 +335,138 @@
 
   </div>
 
-
   <!-- CONTENT -->
 
-  <main class="content">
-
+  <main>
 
     <!-- ABOUT -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>About</h2>
+      <div class="section-label">About</div>
+
+      <h2>
+        Designing a moment of calm in the middle of festival chaos.
+      </h2>
 
       <p>
         Jellyfish is an interactive light installation created for
-        Roskilde Festival 2025. The installation was designed as a
-        serene pause within the intensity of the festival environment.
+        Roskilde Festival 2025.
       </p>
 
       <p>
-        Visitors were invited to slow down and experience calm through
-        light, tactile materials and subtle sensory interaction.
+        The installation invited visitors to slow down and engage with
+        gentle light, tactile materials and subtle sensory interaction
+        in contrast to the surrounding energy of the festival.
       </p>
 
     </section>
-
 
     <!-- CONCEPT -->
 
-    <section class="section">
+    <section class="split-section">
 
-      <h2>The Concept</h2>
+      <div class="media">
 
-      <p>
-        We explored how light and embodied interaction could create a
-        momentary escape from the noise and energy of the festival.
-      </p>
+        <img
+          src="images/jellyfish/jellyfish-festival.jpg"
+          alt="Jellyfish installation in the festival environment"
+        >
 
-      <p>
-        Inspired by the calm, fluid movement of jellyfish, the
-        installation invited visitors to engage with its soft materials,
-        gentle movement and changing light. The intention was to create
-        a meditative sensory experience rather than demand attention.
-      </p>
+      </div>
+
+      <div class="text-block">
+
+        <div class="section-label">The concept</div>
+
+        <h2>
+          Using light and embodied interaction to create a temporary escape.
+        </h2>
+
+        <p>
+          We explored how an installation could offer festival visitors
+          a momentary break from noise, movement and social intensity.
+        </p>
+
+        <p>
+          Inspired by the calm and fluid qualities of jellyfish,
+          the installation combined changing light, soft tactile materials
+          and gentle movement.
+        </p>
+
+        <p>
+          Rather than demanding attention, the installation was designed
+          to invite slower and more reflective interaction.
+        </p>
+
+      </div>
 
     </section>
-
-
-    <!-- FESTIVAL IMAGE -->
-
-    <div class="project-image">
-
-      <img
-        src="images/jellyfish/jellyfish-festival.jpg"
-        alt="Jellyfish installation in the festival environment"
-      >
-
-    </div>
-
 
     <!-- PROCESS -->
 
-    <section class="section">
+    <section class="split-section reverse">
 
-      <h2>From Sketch to Installation</h2>
+      <div class="media">
 
-      <p>
-        Through iterative prototyping and hands-on material exploration,
-        we developed the installation using yarn, bubble wrap, tulle,
-        NeoPixel LEDs and chicken wire.
-      </p>
+        <img
+          src="images/jellyfish/jellyfish-sketch.jpg"
+          alt="Early sketches and development of the Jellyfish installation"
+        >
 
-      <p>
-        The materials were chosen for their softness, transparency and
-        ability to diffuse light, helping create the flowing and organic
-        expression of the final installation.
-      </p>
+      </div>
+
+      <div class="text-block">
+
+        <div class="section-label">From sketch to installation</div>
+
+        <h2>
+          Building the atmosphere through material exploration.
+        </h2>
+
+        <p>
+          The installation developed through iterative prototyping and
+          hands-on experimentation with form, light and material.
+        </p>
+
+        <p>
+          We worked with yarn, bubble wrap, tulle, chicken wire and
+          NeoPixel LEDs to create a soft, translucent structure that could
+          diffuse light and produce an organic visual expression.
+        </p>
+
+        <p>
+          The material qualities became an important part of the interaction,
+          shaping both how the installation looked and how visitors physically
+          approached it.
+        </p>
+
+      </div>
 
     </section>
-
-
-    <!-- SKETCH IMAGE -->
-
-    <div class="project-image">
-
-      <img
-        src="images/jellyfish/jellyfish-sketch.jpg"
-        alt="Early sketches and development of the Jellyfish installation"
-      >
-
-    </div>
-
 
     <!-- EXPERIENCE -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>Experience</h2>
+      <div class="section-label">Experience</div>
+
+      <h2>
+        Creating space for visitors to pause, breathe and engage at their own pace.
+      </h2>
 
       <p>
-        The final installation created a small sensory space within the
-        festival environment where visitors could pause, breathe and
-        engage with the work at their own pace.
+        The final installation created a small sensory environment within
+        the larger festival space.
+      </p>
+
+      <p>
+        Visitors could approach, touch and observe the installation without
+        being given a specific task or goal, allowing the interaction to remain
+        open-ended and personal.
       </p>
 
     </section>
-
 
     <!-- DETAILS -->
 
@@ -399,7 +485,6 @@
 
       </div>
 
-
       <div>
 
         <h3>Technology & Materials</h3>
@@ -416,20 +501,19 @@
 
     </div>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
+
+    <span>© Aja Olufsen</span>
 
     <a href="index.html">
       ← Back to all projects
     </a>
 
   </footer>
-
 
 </body>
 
