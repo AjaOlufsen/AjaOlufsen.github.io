@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
       line-height: 1.6;
     }
@@ -25,110 +25,182 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 35px 40px;
+      padding: 34px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
     .back {
       font-size: 14px;
-      color: #666;
+      color: #777;
     }
 
     .back:hover {
       color: #111;
     }
 
-    /* PROJECT HEADER */
+    /* HEADER */
 
     .project-header {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 100px 40px 70px;
+      padding: 90px 40px 60px;
     }
 
     .project-header h1 {
-      font-size: clamp(45px, 7vw, 85px);
+      margin: 0 0 26px;
+      max-width: 1050px;
+
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 0 0 25px;
+      letter-spacing: -4px;
+      line-height: 0.98;
     }
 
     .project-meta {
-      color: #777;
       font-size: 15px;
+      color: #777;
+      margin-bottom: 28px;
     }
 
-    /* HERO IMAGE */
-
-    .hero-image {
-      max-width: 1200px;
-      height: 700px;
-      margin: 0 auto;
-      background: #eeeeee;
-      overflow: hidden;
+    .project-intro {
+      max-width: 780px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #4d4d4d;
+      margin: 0 0 30px;
     }
 
-    .hero-image img {
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d6;
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto 120px;
+      padding: 0 40px;
+    }
+
+    .hero img {
       width: 100%;
-      height: 100%;
+      height: 620px;
       object-fit: cover;
       display: block;
+      border-radius: 18px;
     }
 
     /* CONTENT */
 
-    .content {
-      max-width: 800px;
+    main {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 0 40px 130px;
     }
 
-    .section {
-      margin-bottom: 80px;
-    }
-
-    .section h2 {
-      font-size: 14px;
+    .section-label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.6px;
+      color: #8a8a8a;
+      margin-bottom: 18px;
+    }
+
+    .text-block h2 {
+      font-size: clamp(30px, 3.2vw, 46px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin: 0 0 26px;
+    }
+
+    .text-block p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #4b4b4b;
+      margin: 0 0 20px;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      max-width: 800px;
+      margin: 0 0 130px;
+    }
+
+    /* SPLIT SECTIONS */
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin: 130px 0;
+    }
+
+    .split-section.reverse .media {
+      order: 2;
+    }
+
+    .split-section.reverse .text-block {
+      order: 1;
+    }
+
+    .media img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* DUAL TEXT */
+
+    .dual-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      margin: 130px 0;
+      padding-top: 70px;
+      border-top: 1px solid #dcdcd8;
+    }
+
+    .dual-text h3 {
+      font-size: 22px;
       font-weight: 500;
       margin: 0 0 20px;
     }
 
-    .section p {
-      font-size: 18px;
-      margin: 0 0 22px;
-      color: #333;
-    }
-
-    /* IMAGE */
-
-    .project-image {
-      width: 100%;
-      height: 500px;
-      background: #eeeeee;
-      margin: 60px 0;
-      overflow: hidden;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .dual-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+      margin: 0 0 18px;
     }
 
     /* DETAILS */
@@ -136,20 +208,23 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      border-top: 1px solid #ddd;
-      padding-top: 30px;
+      gap: 70px;
+      padding-top: 50px;
+      border-top: 1px solid #dcdcd8;
+      margin-top: 130px;
     }
 
     .details h3 {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 16px;
     }
 
     .details p {
       font-size: 15px;
+      line-height: 1.8;
       color: #666;
       margin: 0;
     }
@@ -157,11 +232,14 @@
     /* FOOTER */
 
     footer {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 50px 40px;
-      border-top: 1px solid #ddd;
+      padding: 40px;
+      border-top: 1px solid #dcdcd8;
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -171,62 +249,89 @@
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 25px 20px;
+        padding: 24px 20px;
       }
 
       .project-header {
-        padding: 70px 20px 50px;
+        padding: 65px 20px 45px;
       }
 
-      .hero-image {
-        height: 350px;
-        margin: 0 20px;
+      .project-header h1 {
+        letter-spacing: -2.5px;
       }
 
-      .content {
-        padding: 70px 20px;
+      .project-intro {
+        font-size: 18px;
       }
 
-      .project-image {
-        height: 350px;
+      .hero {
+        padding: 0 20px;
+        margin-bottom: 85px;
+      }
+
+      .hero img {
+        height: 390px;
+      }
+
+      main {
+        padding: 0 20px 90px;
+      }
+
+      .intro-section {
+        margin-bottom: 90px;
+      }
+
+      .split-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 90px 0;
+      }
+
+      .split-section.reverse .media,
+      .split-section.reverse .text-block {
+        order: initial;
+      }
+
+      .media img {
+        height: 360px;
+      }
+
+      .dual-text {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin: 90px 0;
       }
 
       .details {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
+        margin-top: 90px;
       }
 
       footer {
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
       }
     }
+
   </style>
-
 </head>
-
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
 
   <nav>
-
-    <a class="name" href="index.html">
-      Aja Olufsen
-    </a>
-
-    <a class="back" href="index.html">
-      ← Back to projects
-    </a>
-
+    <a class="name" href="index.html">Aja Olufsen</a>
+    <a class="back" href="index.html">← Back to projects</a>
   </nav>
 
-
-  <!-- PROJECT TITLE -->
+  <!-- HEADER -->
 
   <header class="project-header">
 
@@ -236,12 +341,24 @@
       Participatory Design · User Research · School Workshops · 2026
     </div>
 
+    <p class="project-intro">
+      A facilitated design research workshop exploring young people's
+      knowledge of contraception and how they negotiate gender,
+      responsibility and reproductive choices.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Participatory Design</span>
+      <span class="tag">Workshop Facilitation</span>
+      <span class="tag">User Research</span>
+      <span class="tag">Qualitative Research</span>
+    </div>
+
   </header>
 
+  <!-- HERO -->
 
-  <!-- MAIN IMAGE -->
-
-  <div class="hero-image">
+  <div class="hero">
 
     <img
       src="images/workshop/workshop-hero.jpg"
@@ -250,155 +367,184 @@
 
   </div>
 
+  <!-- CONTENT -->
 
-  <!-- PROJECT CONTENT -->
-
-  <main class="content">
-
+  <main>
 
     <!-- ABOUT -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>About</h2>
+      <div class="section-label">About</div>
+
+      <h2>
+        Using participatory workshops to understand knowledge,
+        assumptions and responsibility.
+      </h2>
 
       <p>
-        This workshop was developed as part of our research into contraception,
-        gender and responsibility for the Future Consultation installation at
-        Steno Museum.
+        The workshop was developed as part of the research process for
+        The Future Consultation installation at Steno Museum.
       </p>
 
       <p>
-        Working directly with young people allowed us to explore what they
-        already knew about contraception, how they understood responsibility,
-        and how they responded to situations where familiar gender roles were
-        challenged.
+        Working directly with young people allowed us to explore what
+        participants already knew about contraception, how they understood
+        responsibility and how they responded when familiar gender roles
+        were challenged.
       </p>
 
     </section>
-
 
     <!-- THE WORKSHOP -->
 
-    <section class="section">
+    <section class="split-section">
 
-      <h2>The workshop</h2>
+      <div class="media">
 
-      <p>
-        We designed and facilitated a series of participatory activities with
-        students from different school classes.
-      </p>
+        <img
+          src="images/workshop/workshop-materials.jpg"
+          alt="Workshop materials with scenario cards and wooden tokens"
+        >
 
-      <p>
-        Through visual mapping exercises, contraceptive method cards and
-        discussion-based scenarios, participants were invited to share their
-        knowledge, assumptions and opinions without being presented with a
-        predetermined correct answer.
-      </p>
+      </div>
 
-      <p>
-        The workshop format made it possible to observe not only what
-        participants knew, but also how they negotiated responsibility and
-        reacted to each other's perspectives in conversation.
-      </p>
+      <div class="text-block">
 
-    </section>
+        <div class="section-label">The workshop</div>
 
+        <h2>
+          Designing activities that made room for discussion rather than
+          correct answers.
+        </h2>
 
-    <!-- MATERIALS IMAGE -->
+        <p>
+          We designed and facilitated a series of participatory activities
+          with students from different school classes.
+        </p>
 
-    <div class="project-image">
+        <p>
+          Visual mapping exercises, contraceptive method cards and
+          discussion-based scenarios invited participants to share their
+          knowledge, assumptions and opinions.
+        </p>
 
-      <img
-        src="images/workshop/workshop-materials.jpg"
-        alt="Workshop materials with scenario cards and wooden tokens"
-      >
+        <p>
+          The workshop allowed us to observe not only what participants
+          knew, but how they negotiated responsibility and responded to
+          each other's perspectives.
+        </p>
 
-    </div>
-
-
-    <!-- FACILITATION -->
-
-    <section class="section">
-
-      <h2>Facilitation</h2>
-
-      <p>
-        Our role was not only to design the workshop materials, but also to
-        facilitate the sessions and create a setting where sensitive topics
-        could be discussed openly.
-      </p>
-
-      <p>
-        We guided the activities, introduced the scenarios, observed group
-        discussions and adapted our facilitation when participants responded
-        with humour, uncertainty or disagreement.
-      </p>
-
-      <p>
-        Because contraception can be both personal and socially sensitive,
-        the workshop was designed to encourage participation without requiring
-        students to disclose personal experiences.
-      </p>
+      </div>
 
     </section>
 
+    <!-- FACILITATION + DESIGN IMPACT -->
 
-    <!-- RESEARCH -->
+    <section class="dual-text">
 
-    <section class="section">
+      <div>
 
-      <h2>Research insights</h2>
+        <h3>Facilitation</h3>
 
-      <p>
-        The workshops revealed clear differences in participants' familiarity
-        with contraceptive methods. Condoms and birth control pills were widely
-        recognised, while methods such as the vaginal ring, contraceptive patch,
-        diaphragm and female condom were far less familiar.
-      </p>
+        <p>
+          Our role was not only to design the workshop materials, but also
+          to facilitate the sessions and create a setting where sensitive
+          topics could be discussed openly.
+        </p>
 
-      <p>
-        The scenario discussions also gave us insight into how responsibility
-        for contraception was understood. These conversations became an
-        important foundation for the design of the Future Consultation and its
-        deliberate use of mismatched contraceptive recommendations.
-      </p>
+        <p>
+          We introduced activities, guided conversations, observed group
+          dynamics and adapted the facilitation when participants responded
+          with humour, uncertainty or disagreement.
+        </p>
 
-    </section>
+      </div>
 
+      <div>
 
-    <!-- RESEARCH IMAGE -->
+        <h3>Designing for sensitive topics</h3>
 
-    <div class="project-image">
+        <p>
+          Because contraception can be personal and socially sensitive,
+          participation was designed so students could contribute without
+          being required to disclose personal experiences.
+        </p>
 
-      <img
-        src="images/workshop/workshop-research.jpg"
-        alt="Workshop activity mapping participants' knowledge of contraceptive methods"
-      >
+        <p>
+          This allowed the workshop to remain open and exploratory while
+          still producing meaningful qualitative insights.
+        </p>
 
-    </div>
-
-
-    <!-- DESIGN IMPACT -->
-
-    <section class="section">
-
-      <h2>From research to design</h2>
-
-      <p>
-        Rather than treating the workshops as a separate research activity,
-        the findings were directly incorporated into the design process.
-      </p>
-
-      <p>
-        Participants' responses helped us refine the scenarios, understand
-        which contraceptive methods required additional context, and identify
-        the assumptions around gender and responsibility that the final
-        installation could meaningfully challenge.
-      </p>
+      </div>
 
     </section>
 
+    <!-- RESEARCH INSIGHTS -->
+
+    <section class="split-section reverse">
+
+      <div class="media">
+
+        <img
+          src="images/workshop/workshop-research.jpg"
+          alt="Workshop activity mapping participants' knowledge of contraceptive methods"
+        >
+
+      </div>
+
+      <div class="text-block">
+
+        <div class="section-label">Research insights</div>
+
+        <h2>
+          Mapping what participants knew — and where knowledge became uneven.
+        </h2>
+
+        <p>
+          Condoms and birth control pills were widely recognised, while
+          methods such as the vaginal ring, contraceptive patch, diaphragm
+          and female condom were much less familiar.
+        </p>
+
+        <p>
+          The scenario discussions also revealed how responsibility for
+          contraception was negotiated between genders.
+        </p>
+
+        <p>
+          These conversations became an important foundation for the final
+          Future Consultation installation and its deliberate use of
+          mismatched contraceptive recommendations.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- FROM RESEARCH TO DESIGN -->
+
+    <section class="intro-section text-block">
+
+      <div class="section-label">From research to design</div>
+
+      <h2>
+        Turning workshop observations into concrete design decisions.
+      </h2>
+
+      <p>
+        The workshops were not treated as a separate research exercise.
+        Findings were incorporated directly into the design process.
+      </p>
+
+      <p>
+        Participants' responses helped us refine the scenarios, identify
+        where additional contraceptive information was needed and understand
+        which assumptions around gender and responsibility the installation
+        could meaningfully challenge.
+      </p>
+
+    </section>
 
     <!-- DETAILS -->
 
@@ -419,7 +565,6 @@
 
       </div>
 
-
       <div>
 
         <h3>Focus</h3>
@@ -436,20 +581,19 @@
 
     </div>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
+
+    <span>© Aja Olufsen</span>
 
     <a href="index.html">
       ← Back to all projects
     </a>
 
   </footer>
-
 
 </body>
 
