@@ -61,7 +61,6 @@
     .project-header h1 {
       margin: 0 0 26px;
       max-width: 1050px;
-
       font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
       letter-spacing: -4px;
@@ -75,7 +74,7 @@
     }
 
     .project-intro {
-      max-width: 780px;
+      max-width: 800px;
       font-size: 21px;
       line-height: 1.55;
       color: #4d4d4d;
@@ -103,13 +102,13 @@
 
     .hero {
       max-width: 1120px;
-      margin: 0 auto 120px;
+      margin: 0 auto 90px;
       padding: 0 40px;
     }
 
     .hero img {
       width: 100%;
-      height: 620px;
+      height: 580px;
       object-fit: cover;
       display: block;
       border-radius: 18px;
@@ -123,84 +122,87 @@
       padding: 0 40px 130px;
     }
 
-    .section-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      color: #8a8a8a;
-      margin-bottom: 18px;
-    }
+    /* CASE GRID */
 
-    .text-block h2 {
-      font-size: clamp(30px, 3.2vw, 46px);
-      font-weight: 500;
-      line-height: 1.08;
-      letter-spacing: -1.7px;
-      margin: 0 0 26px;
-    }
-
-    .text-block p {
-      font-size: 17px;
-      line-height: 1.75;
-      color: #4b4b4b;
-      margin: 0 0 20px;
-    }
-
-    /* INTRO */
-
-    .intro-section {
-      max-width: 800px;
-      margin: 0 0 130px;
-    }
-
-    /* SPLIT SECTIONS */
-
-    .split-section {
+    .case-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-      margin: 130px 0;
+      grid-template-columns: 1.55fr 0.95fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 26px;
     }
 
-    .split-section.reverse .media {
-      order: 2;
+    .left-stack,
+    .right-stack {
+      display: grid;
+      gap: 26px;
     }
 
-    .split-section.reverse .text-block {
-      order: 1;
+    /* CARDS */
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dededb;
+      border-radius: 18px;
+      padding: 34px 36px;
     }
 
-    .media img {
+    .card h2 {
+      margin: 0 0 22px;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.4px;
+    }
+
+    .card h3 {
+      margin: 0 0 16px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #4e4e4e;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .small-card p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    .small-card strong {
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* FEATURE IMAGE */
+
+    .feature-image {
+      width: 100%;
+      margin: 70px 0;
+    }
+
+    .feature-image img {
       width: 100%;
       height: 500px;
       object-fit: cover;
       display: block;
-      border-radius: 16px;
+      border-radius: 18px;
     }
 
-    /* DUAL TEXT */
+    /* TWO CARDS */
 
-    .dual-text {
+    .two-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      margin: 130px 0;
-      padding-top: 70px;
-      border-top: 1px solid #dcdcd8;
-    }
-
-    .dual-text h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin: 0 0 20px;
-    }
-
-    .dual-text p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #555;
-      margin: 0 0 18px;
+      gap: 26px;
+      margin: 26px 0 70px;
     }
 
     /* DETAILS */
@@ -208,25 +210,8 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      padding-top: 50px;
-      border-top: 1px solid #dcdcd8;
-      margin-top: 130px;
-    }
-
-    .details h3 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 500;
-      margin: 0 0 16px;
-    }
-
-    .details p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #666;
-      margin: 0;
+      gap: 26px;
+      margin-top: 70px;
     }
 
     /* FOOTER */
@@ -269,46 +254,33 @@
 
       .hero {
         padding: 0 20px;
-        margin-bottom: 85px;
+        margin-bottom: 65px;
       }
 
       .hero img {
-        height: 390px;
+        height: 380px;
       }
 
       main {
         padding: 0 20px 90px;
       }
 
-      .intro-section {
-        margin-bottom: 90px;
-      }
-
-      .split-section {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        margin: 90px 0;
-      }
-
-      .split-section.reverse .media,
-      .split-section.reverse .text-block {
-        order: initial;
-      }
-
-      .media img {
-        height: 360px;
-      }
-
-      .dual-text {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        margin: 90px 0;
-      }
-
+      .case-grid,
+      .two-cards,
       .details {
         grid-template-columns: 1fr;
-        gap: 35px;
-        margin-top: 90px;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .feature-image {
+        margin: 50px 0;
+      }
+
+      .feature-image img {
+        height: 350px;
       }
 
       footer {
@@ -338,7 +310,7 @@
     <h1>Contraception & Responsibility Workshop</h1>
 
     <div class="project-meta">
-      Participatory Design · User Research · School Workshops · 2026
+      Master’s Thesis Research · Participatory Design · School Workshops · 2026
     </div>
 
     <p class="project-intro">
@@ -371,178 +343,250 @@
 
   <main>
 
-    <!-- ABOUT -->
+    <!-- TOP GRID -->
 
-    <section class="intro-section text-block">
+    <section class="case-grid">
 
-      <div class="section-label">About</div>
+      <div class="left-stack">
 
-      <h2>
-        Using participatory workshops to understand knowledge,
-        assumptions and responsibility.
-      </h2>
+        <div class="card">
 
-      <p>
-        The workshop was developed as part of the research process for
-        The Future Consultation installation at Steno Museum.
-      </p>
+          <h2>Context</h2>
 
-      <p>
-        Working directly with young people allowed us to explore what
-        participants already knew about contraception, how they understood
-        responsibility and how they responded when familiar gender roles
-        were challenged.
-      </p>
+          <p>
+            The workshop was developed as part of the research process for
+            our Master's thesis and the Future Consultation installation
+            at Steno Museum.
+          </p>
 
-    </section>
+          <p>
+            Working directly with young people allowed us to investigate
+            how contraception was understood before translating those
+            insights into the final interactive installation.
+          </p>
 
-    <!-- THE WORKSHOP -->
+        </div>
 
-    <section class="split-section">
+        <div class="card">
 
-      <div class="media">
+          <h2>Research focus</h2>
 
-        <img
-          src="images/workshop/workshop-materials.jpg"
-          alt="Workshop materials with scenario cards and wooden tokens"
-        >
+          <p>
+            We explored what participants already knew about different
+            contraceptive methods, how responsibility was negotiated
+            between genders and how young people responded when familiar
+            roles and expectations were challenged.
+          </p>
 
-      </div>
+          <p>
+            The workshop was designed to generate discussion rather than
+            lead participants towards a predetermined correct answer.
+          </p>
 
-      <div class="text-block">
-
-        <div class="section-label">The workshop</div>
-
-        <h2>
-          Designing activities that made room for discussion rather than
-          correct answers.
-        </h2>
-
-        <p>
-          We designed and facilitated a series of participatory activities
-          with students from different school classes.
-        </p>
-
-        <p>
-          Visual mapping exercises, contraceptive method cards and
-          discussion-based scenarios invited participants to share their
-          knowledge, assumptions and opinions.
-        </p>
-
-        <p>
-          The workshop allowed us to observe not only what participants
-          knew, but how they negotiated responsibility and responded to
-          each other's perspectives.
-        </p>
+        </div>
 
       </div>
 
-    </section>
+      <div class="right-stack">
 
-    <!-- FACILITATION + DESIGN IMPACT -->
+        <div class="card small-card">
 
-    <section class="dual-text">
+          <h2>Project snapshot</h2>
 
-      <div>
+          <p>
+            <strong>Type:</strong> Master’s thesis research
+          </p>
 
-        <h3>Facilitation</h3>
+          <p>
+            <strong>Programme:</strong> Cand.IT Digital Transformation
+          </p>
 
-        <p>
-          Our role was not only to design the workshop materials, but also
-          to facilitate the sessions and create a setting where sensitive
-          topics could be discussed openly.
-        </p>
+          <p>
+            <strong>Context:</strong> School workshops
+          </p>
 
-        <p>
-          We introduced activities, guided conversations, observed group
-          dynamics and adapted the facilitation when participants responded
-          with humour, uncertainty or disagreement.
-        </p>
+          <p>
+            <strong>Target group:</strong> Young people
+          </p>
 
-      </div>
+          <p>
+            <strong>My role:</strong> Workshop design, facilitation,
+            observation and qualitative research
+          </p>
 
-      <div>
+        </div>
 
-        <h3>Designing for sensitive topics</h3>
+        <div class="card small-card">
 
-        <p>
-          Because contraception can be personal and socially sensitive,
-          participation was designed so students could contribute without
-          being required to disclose personal experiences.
-        </p>
+          <h2>Methods</h2>
 
-        <p>
-          This allowed the workshop to remain open and exploratory while
-          still producing meaningful qualitative insights.
-        </p>
+          <p>
+            <strong>Research:</strong><br>
+            Participatory design, observation,
+            scenario-based research and qualitative analysis
+          </p>
+
+          <p>
+            <strong>Workshop activities:</strong><br>
+            Knowledge mapping, contraceptive method cards
+            and facilitated scenario discussions
+          </p>
+
+        </div>
 
       </div>
 
     </section>
 
-    <!-- RESEARCH INSIGHTS -->
+    <!-- MATERIALS IMAGE -->
 
-    <section class="split-section reverse">
+    <div class="feature-image">
 
-      <div class="media">
+      <img
+        src="images/workshop/workshop-materials.jpg"
+        alt="Workshop materials with scenario cards and wooden tokens"
+      >
 
-        <img
-          src="images/workshop/workshop-research.jpg"
-          alt="Workshop activity mapping participants' knowledge of contraceptive methods"
-        >
+    </div>
+
+    <!-- WORKSHOP + FACILITATION -->
+
+    <section class="two-cards">
+
+      <div class="card">
+
+        <h2>The workshop</h2>
+
+        <p>
+          We designed a series of participatory activities using visual
+          mapping exercises, contraceptive method cards and discussion-based
+          scenarios.
+        </p>
+
+        <p>
+          The activities invited participants to share knowledge,
+          assumptions and opinions while allowing us to observe how
+          different perspectives were negotiated within the group.
+        </p>
 
       </div>
 
-      <div class="text-block">
+      <div class="card">
 
-        <div class="section-label">Research insights</div>
-
-        <h2>
-          Mapping what participants knew — and where knowledge became uneven.
-        </h2>
+        <h2>Facilitation</h2>
 
         <p>
-          Condoms and birth control pills were widely recognised, while
-          methods such as the vaginal ring, contraceptive patch, diaphragm
-          and female condom were much less familiar.
+          We facilitated the sessions ourselves, introducing activities,
+          guiding conversations and observing group dynamics.
         </p>
 
         <p>
-          The scenario discussions also revealed how responsibility for
-          contraception was negotiated between genders.
-        </p>
-
-        <p>
-          These conversations became an important foundation for the final
-          Future Consultation installation and its deliberate use of
-          mismatched contraceptive recommendations.
+          Because contraception can be a sensitive topic, participation
+          was structured so students could contribute without being asked
+          to disclose personal experiences.
         </p>
 
       </div>
 
     </section>
 
-    <!-- FROM RESEARCH TO DESIGN -->
+    <!-- RESEARCH IMAGE -->
 
-    <section class="intro-section text-block">
+    <div class="feature-image">
 
-      <div class="section-label">From research to design</div>
+      <img
+        src="images/workshop/workshop-research.jpg"
+        alt="Workshop activity mapping participants' knowledge of contraceptive methods"
+      >
 
-      <h2>
-        Turning workshop observations into concrete design decisions.
-      </h2>
+    </div>
 
-      <p>
-        The workshops were not treated as a separate research exercise.
-        Findings were incorporated directly into the design process.
-      </p>
+    <!-- FINDINGS -->
 
-      <p>
-        Participants' responses helped us refine the scenarios, identify
-        where additional contraceptive information was needed and understand
-        which assumptions around gender and responsibility the installation
-        could meaningfully challenge.
-      </p>
+    <section class="case-grid">
+
+      <div class="left-stack">
+
+        <div class="card">
+
+          <h2>Research insights</h2>
+
+          <p>
+            Condoms and birth control pills were widely recognised,
+            while methods such as the vaginal ring, contraceptive patch,
+            diaphragm and female condom were much less familiar.
+          </p>
+
+          <p>
+            Discussions also revealed differences in how contraceptive
+            responsibility was understood and negotiated.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h2>From research to design</h2>
+
+          <p>
+            Findings from the workshops were incorporated directly into
+            the design of the Future Consultation.
+          </p>
+
+          <p>
+            Participant responses helped us refine the scenarios,
+            identify where additional information was needed and understand
+            which assumptions about gender and responsibility the final
+            installation could meaningfully challenge.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="right-stack">
+
+        <div class="card small-card">
+
+          <h2>Key observations</h2>
+
+          <p>
+            Familiarity with contraceptive methods was uneven.
+          </p>
+
+          <p>
+            Gender influenced how responsibility was discussed.
+          </p>
+
+          <p>
+            Humour and uncertainty often became part of the conversation.
+          </p>
+
+        </div>
+
+        <div class="card small-card">
+
+          <h2>Design impact</h2>
+
+          <p>
+            Scenario refinement
+          </p>
+
+          <p>
+            Contraceptive information
+          </p>
+
+          <p>
+            Gender mismatch concept
+          </p>
+
+          <p>
+            Interaction framing
+          </p>
+
+        </div>
+
+      </div>
 
     </section>
 
@@ -550,9 +594,9 @@
 
     <div class="details">
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Methods</h3>
+        <h2>Methods</h2>
 
         <p>
           Participatory Design<br>
@@ -565,9 +609,9 @@
 
       </div>
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Focus</h3>
+        <h2>Focus</h2>
 
         <p>
           Contraception<br>
