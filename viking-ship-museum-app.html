@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
       line-height: 1.6;
     }
@@ -25,140 +25,203 @@
       text-decoration: none;
     }
 
-
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 35px 40px;
+      padding: 34px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
     .back {
       font-size: 14px;
-      color: #666;
+      color: #777;
     }
 
     .back:hover {
       color: #111;
     }
 
-
-    /* PROJECT HEADER */
+    /* HEADER */
 
     .project-header {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 100px 40px 70px;
+      padding: 90px 40px 60px;
     }
 
     .project-header h1 {
-      font-size: clamp(45px, 7vw, 85px);
+      margin: 0 0 26px;
+      max-width: 1050px;
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 0 0 25px;
+      letter-spacing: -4px;
+      line-height: 0.98;
     }
 
     .project-meta {
-      color: #777;
       font-size: 15px;
+      color: #777;
+      margin-bottom: 28px;
     }
 
+    .project-intro {
+      max-width: 780px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #4d4d4d;
+      margin: 0 0 30px;
+    }
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d6;
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #666;
+    }
 
     /* HERO */
 
-    .hero-image {
-      max-width: 1200px;
-      height: 720px;
-      margin: 0 auto;
-      background: #eeeeee;
-      overflow: hidden;
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto 120px;
+      padding: 0 40px;
     }
 
-    .hero-image img {
+    .hero img {
       width: 100%;
-      height: 100%;
+      height: 620px;
       object-fit: contain;
       display: block;
       background: #000;
+      border-radius: 18px;
     }
-
 
     /* CONTENT */
 
-    .content {
-      max-width: 1000px;
+    main {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 140px 80px 160px;
+      padding: 0 40px 130px;
     }
 
-    .section {
-      margin-bottom: 110px;
-    }
-
-    .section h2 {
-      font-size: 13px;
+    .section-label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.6px;
+      color: #8a8a8a;
+      margin-bottom: 18px;
+    }
+
+    .text-block h2 {
+      font-size: clamp(30px, 3.2vw, 46px);
       font-weight: 500;
-      margin: 0 0 32px;
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin: 0 0 26px;
     }
 
-    .section p {
-      max-width: 720px;
+    .text-block p {
       font-size: 17px;
-      line-height: 1.8;
-      margin: 0 0 24px;
-      color: #555;
+      line-height: 1.75;
+      color: #4b4b4b;
+      margin: 0 0 20px;
     }
 
+    /* INTRO */
 
-    /* LARGE STATEMENT */
+    .intro-section {
+      max-width: 800px;
+      margin: 0 0 130px;
+    }
 
-    .highlight {
-      max-width: 760px;
-      font-size: clamp(27px, 3vw, 38px);
-      font-weight: 400;
-      line-height: 1.35;
-      letter-spacing: -1px;
-      color: #111;
+    /* SPLIT SECTIONS */
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
       margin: 130px 0;
     }
 
-
-    /* PROJECT IMAGES */
-
-    .project-image {
-      width: 100%;
-      margin: 100px 0;
-      overflow: hidden;
-      background: #eeeeee;
+    .split-section.reverse .media {
+      order: 2;
     }
 
-    .project-image img {
+    .split-section.reverse .text-block {
+      order: 1;
+    }
+
+    .media img {
       width: 100%;
-      height: auto;
+      height: 500px;
+      object-fit: cover;
       display: block;
+      border-radius: 16px;
     }
 
+    /* DUAL TEXT */
+
+    .dual-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      margin: 130px 0;
+      padding-top: 70px;
+      border-top: 1px solid #dcdcd8;
+    }
+
+    .dual-text h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin: 0 0 20px;
+    }
+
+    .dual-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+      margin: 0 0 18px;
+    }
+
+    /* HIGHLIGHT */
+
+    .highlight {
+      max-width: 820px;
+      margin: 150px 0;
+      font-size: clamp(34px, 4.5vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      font-weight: 500;
+    }
 
     /* DETAILS */
 
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      border-top: 1px solid #ddd;
-      padding-top: 40px;
+      gap: 70px;
+      padding-top: 50px;
+      border-top: 1px solid #dcdcd8;
       margin-top: 130px;
     }
 
@@ -167,7 +230,7 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-weight: 500;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
     }
 
     .details p {
@@ -177,15 +240,17 @@
       margin: 0;
     }
 
-
     /* FOOTER */
 
     footer {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 50px 40px;
-      border-top: 1px solid #ddd;
+      padding: 40px;
+      border-top: 1px solid #dcdcd8;
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -193,47 +258,67 @@
       text-underline-offset: 3px;
     }
 
-
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 25px 20px;
+        padding: 24px 20px;
       }
 
       .project-header {
-        padding: 70px 20px 50px;
+        padding: 65px 20px 45px;
       }
 
       .project-header h1 {
-        letter-spacing: -2px;
+        letter-spacing: -2.5px;
       }
 
-      .hero-image {
-        height: 420px;
-        margin: 0 20px;
+      .project-intro {
+        font-size: 18px;
       }
 
-      .content {
-        padding: 80px 30px 100px;
+      .hero {
+        padding: 0 20px;
+        margin-bottom: 85px;
       }
 
-      .section {
-        margin-bottom: 80px;
+      .hero img {
+        height: 390px;
       }
 
-      .section p {
-        font-size: 16px;
+      main {
+        padding: 0 20px 90px;
+      }
+
+      .intro-section {
+        margin-bottom: 90px;
+      }
+
+      .split-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 90px 0;
+      }
+
+      .split-section.reverse .media,
+      .split-section.reverse .text-block {
+        order: initial;
+      }
+
+      .media img {
+        height: 360px;
+      }
+
+      .dual-text {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin: 90px 0;
       }
 
       .highlight {
-        margin: 90px 0;
-        font-size: 27px;
-      }
-
-      .project-image {
-        margin: 70px 0;
+        margin: 100px 0;
+        font-size: 36px;
       }
 
       .details {
@@ -244,33 +329,25 @@
 
       footer {
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
       }
     }
 
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- NAVIGATION -->
+  <!-- NAV -->
 
   <nav>
-
-    <a class="name" href="index.html">
-      Aja Olufsen
-    </a>
-
-    <a class="back" href="index.html">
-      ← Back to projects
-    </a>
-
+    <a class="name" href="index.html">Aja Olufsen</a>
+    <a class="back" href="index.html">← Back to projects</a>
   </nav>
 
-
-  <!-- PROJECT HEADER -->
+  <!-- HEADER -->
 
   <header class="project-header">
 
@@ -280,12 +357,24 @@
       Interaction Design · Digital Museum Experience · Prototyping · 2024
     </div>
 
-  </header>
+    <p class="project-intro">
+      A playful digital museum experience combining QR-code interaction,
+      exploration and historical storytelling through an interactive
+      treasure hunt.
+    </p>
 
+    <div class="tags">
+      <span class="tag">Interaction Design</span>
+      <span class="tag">Design Sprint 2.0</span>
+      <span class="tag">p5.js</span>
+      <span class="tag">User Testing</span>
+    </div>
+
+  </header>
 
   <!-- HERO -->
 
-  <div class="hero-image">
+  <div class="hero">
 
     <img
       src="images/viking-ship-museum/viking-ship-museum-hero.jpg"
@@ -294,160 +383,189 @@
 
   </div>
 
-
   <!-- CONTENT -->
 
-  <main class="content">
-
+  <main>
 
     <!-- ABOUT -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>About</h2>
+      <div class="section-label">About</div>
+
+      <h2>
+        Exploring how digital interaction could make a museum visit
+        more active, playful and engaging.
+      </h2>
 
       <p>
-        This project explored how digital interaction could create a more
-        engaging and accessible experience for visitors at the Viking Ship Museum
-        in Roskilde.
+        The project was developed around a case from the Viking Ship Museum
+        in Roskilde, which wanted to explore new ways of communicating
+        activities, information and historical content through digital technology.
       </p>
 
       <p>
-        The museum wanted to improve the way visitors discovered activities,
-        information and historical content, while also exploring new ways of
-        communicating the museum experience through digital technology.
-      </p>
-
-    </section>
-
-
-    <!-- CHALLENGE -->
-
-    <section class="section">
-
-      <h2>The Challenge</h2>
-
-      <p>
-        Existing information displays could be difficult for international
-        visitors to understand, while parts of the museum required new ways
-        of communicating historical knowledge when staff were not present.
-      </p>
-
-      <p>
-        We therefore explored how an interactive digital platform could
-        motivate visitors to engage more actively with the museum rather
-        than simply receive information passively.
+        We focused on how a mobile experience could motivate visitors to move
+        through the museum and actively discover content rather than receive
+        information passively.
       </p>
 
     </section>
 
+    <!-- CHALLENGE / CONCEPT -->
 
-    <!-- STATEMENT -->
+    <section class="dual-text">
+
+      <div>
+
+        <div class="section-label">The challenge</div>
+
+        <h3>Making museum information easier to discover and engage with.</h3>
+
+        <p>
+          Existing information displays could be difficult for international
+          visitors to interpret, while some areas of the museum required
+          alternative ways of communicating historical knowledge when staff
+          were not present.
+        </p>
+
+      </div>
+
+      <div>
+
+        <div class="section-label">The concept</div>
+
+        <h3>Turning the museum visit into an interactive treasure hunt.</h3>
+
+        <p>
+          The concept evolved into a mobile experience aimed primarily
+          at younger visitors.
+        </p>
+
+        <p>
+          Guests could scan QR codes positioned throughout the museum,
+          meet animated Viking characters and complete missions to unlock
+          the next part of the experience.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- HIGHLIGHT -->
 
     <div class="highlight">
       How can learning feel like exploration rather than instruction?
     </div>
 
+    <!-- PROTOTYPE -->
 
-    <!-- CONCEPT -->
+    <section class="split-section">
 
-    <section class="section">
+      <div class="media">
 
-      <h2>The Concept</h2>
+        <img
+          src="images/viking-ship-museum/viking-ship-museum-prototype.jpg"
+          alt="Early prototype of the Viking Ship Museum app"
+        >
 
-      <p>
-        The concept evolved into a mobile treasure hunt aimed primarily at
-        younger visitors. Guests could download the app, scan QR codes placed
-        throughout the museum and complete missions guided by animated Viking
-        characters.
-      </p>
+      </div>
 
-      <p>
-        Each scanned code revealed a new task or piece of historical content,
-        encouraging visitors to move through the museum and discover the next
-        location through play.
-      </p>
+      <div class="text-block">
 
-    </section>
+        <div class="section-label">Design process</div>
 
+        <h2>
+          Moving from speculative ideas towards a testable museum experience.
+        </h2>
 
-    <!-- PROTOTYPE IMAGE -->
+        <p>
+          The project developed through several iterations, beginning with
+          speculative design and the question: What if Vikings still existed
+          in contemporary society?
+        </p>
 
-    <div class="project-image">
+        <p>
+          This exploration gradually moved towards a more concrete experience.
+          We used ideation, storyboarding and Design Sprint 2.0 to develop the
+          interaction and explore different combinations of navigation,
+          storytelling and play.
+        </p>
 
-      <img
-        src="images/viking-ship-museum/viking-ship-museum-prototype.jpg"
-        alt="Early prototype of the Viking Ship Museum app"
-      >
+        <p>
+          A functional prototype was developed with a particular focus on
+          QR-code interaction as the connection between the physical museum
+          and the digital experience.
+        </p>
 
-    </div>
-
-
-    <!-- PROCESS -->
-
-    <section class="section">
-
-      <h2>Design Process</h2>
-
-      <p>
-        The project developed through several iterations, beginning with
-        speculative design and the question: What if Vikings still existed
-        in contemporary society?
-      </p>
-
-      <p>
-        This exploration gradually moved from speculative scenarios towards
-        a more concrete museum experience. We used ideation, storyboarding,
-        design sprints and prototyping to define the interaction and test
-        different ways of combining play, navigation and learning.
-      </p>
-
-      <p>
-        A functional prototype was developed with a particular focus on the
-        QR-code interaction, which became the central link between the
-        physical museum environment and the digital experience.
-      </p>
+      </div>
 
     </section>
 
+    <!-- USER TESTING -->
 
-    <!-- USER TESTING IMAGE -->
+    <section class="split-section reverse">
 
-    <div class="project-image">
+      <div class="media">
 
-      <img
-        src="images/viking-ship-museum/viking-ship-museum-user-testing.jpg"
-        alt="User testing of the Viking Ship Museum app"
-      >
+        <img
+          src="images/viking-ship-museum/viking-ship-museum-user-testing.jpg"
+          alt="User testing of the Viking Ship Museum app"
+        >
 
-    </div>
+      </div>
 
+      <div class="text-block">
 
-    <!-- TESTING -->
+        <div class="section-label">User testing</div>
 
-    <section class="section">
+        <h2>
+          Testing whether play and learning could work as one experience.
+        </h2>
 
-      <h2>User Testing</h2>
+        <p>
+          The prototype was tested with users and museum staff to evaluate
+          both the interface and the overall visitor experience.
+        </p>
 
-      <p>
-        The prototype was tested with users and museum staff to evaluate both
-        the interface and the overall experience.
-      </p>
+        <p>
+          Participants responded positively to the interactive treasure hunt,
+          particularly the animated Viking characters and the use of QR codes
+          to progress through the experience.
+        </p>
 
-      <p>
-        Participants responded positively to the interactive treasure hunt,
-        particularly the animated Viking characters and the use of QR codes
-        as a way of progressing through the experience.
-      </p>
+        <p>
+          The testing helped refine the balance between entertainment and
+          historical learning, so information felt integrated into the activity
+          rather than added afterwards.
+        </p>
 
-      <p>
-        The testing helped us refine the relationship between entertainment
-        and learning, with the aim of making historical information feel
-        integrated into the interaction rather than added on top of it.
-      </p>
+      </div>
 
     </section>
 
+    <!-- DESIGN APPROACH -->
+
+    <section class="intro-section text-block">
+
+      <div class="section-label">Design approach</div>
+
+      <h2>
+        Connecting the digital interface to movement through the physical museum.
+      </h2>
+
+      <p>
+        The app was not designed as a standalone screen experience.
+        The QR-code interaction made the museum itself part of the interface,
+        requiring visitors to move, discover and interact with physical locations.
+      </p>
+
+      <p>
+        This relationship between physical exploration and digital feedback
+        became central to the concept.
+      </p>
+
+    </section>
 
     <!-- DETAILS -->
 
@@ -468,7 +586,6 @@
 
       </div>
 
-
       <div>
 
         <h3>Technology & Design</h3>
@@ -485,20 +602,19 @@
 
     </div>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
+
+    <span>© Aja Olufsen</span>
 
     <a href="index.html">
       ← Back to all projects
     </a>
 
   </footer>
-
 
 </body>
 
