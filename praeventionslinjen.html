@@ -60,11 +60,11 @@
 
     .project-header h1 {
       margin: 0 0 26px;
+      max-width: 1000px;
       font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
       letter-spacing: -4px;
       line-height: 0.98;
-      max-width: 1000px;
     }
 
     .project-meta {
@@ -74,7 +74,7 @@
     }
 
     .project-intro {
-      max-width: 760px;
+      max-width: 780px;
       font-size: 21px;
       line-height: 1.55;
       color: #4d4d4d;
@@ -102,13 +102,13 @@
 
     .hero {
       max-width: 1120px;
-      margin: 0 auto 120px;
+      margin: 0 auto 90px;
       padding: 0 40px;
     }
 
     .hero img {
       width: 100%;
-      height: 620px;
+      height: 580px;
       object-fit: cover;
       display: block;
       border-radius: 18px;
@@ -122,84 +122,87 @@
       padding: 0 40px 130px;
     }
 
-    .section-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      color: #8a8a8a;
-      margin-bottom: 18px;
-    }
+    /* GRID */
 
-    .text-block h2 {
-      font-size: clamp(30px, 3.2vw, 46px);
-      font-weight: 500;
-      line-height: 1.08;
-      letter-spacing: -1.7px;
-      margin: 0 0 26px;
-    }
-
-    .text-block p {
-      font-size: 17px;
-      line-height: 1.75;
-      color: #4b4b4b;
-      margin: 0 0 20px;
-    }
-
-    /* INTRO */
-
-    .intro-section {
-      max-width: 780px;
-      margin: 0 0 130px;
-    }
-
-    /* SPLIT SECTIONS */
-
-    .split-section {
+    .case-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-      margin: 130px 0;
+      grid-template-columns: 1.55fr 0.95fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 26px;
     }
 
-    .split-section.reverse .media {
-      order: 2;
-    }
-
-    .split-section.reverse .text-block {
-      order: 1;
-    }
-
-    .media img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      display: block;
-      border-radius: 16px;
-    }
-
-    /* ROLE / PROCESS */
-
-    .dual-text {
+    .left-stack,
+    .right-stack {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      margin: 130px 0;
-      padding-top: 70px;
-      border-top: 1px solid #dcdcd8;
+      gap: 26px;
     }
 
-    .dual-text h3 {
+    /* CARDS */
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dededb;
+      border-radius: 18px;
+      padding: 34px 36px;
+    }
+
+    .card h2 {
+      margin: 0 0 22px;
       font-size: 22px;
       font-weight: 500;
-      margin: 0 0 20px;
+      letter-spacing: -0.4px;
     }
 
-    .dual-text p {
+    .card h3 {
+      margin: 0 0 16px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin: 0 0 18px;
       font-size: 16px;
       line-height: 1.75;
-      color: #555;
-      margin: 0;
+      color: #4e4e4e;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .small-card p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    .small-card strong {
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* FEATURE IMAGE */
+
+    .feature-image {
+      width: 100%;
+      margin: 70px 0;
+    }
+
+    .feature-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 18px;
+    }
+
+    /* TWO CARDS */
+
+    .two-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      margin: 26px 0 70px;
     }
 
     /* DETAILS */
@@ -207,25 +210,8 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      padding-top: 50px;
-      border-top: 1px solid #dcdcd8;
-      margin-top: 130px;
-    }
-
-    .details h3 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 500;
-      margin: 0 0 16px;
-    }
-
-    .details p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #666;
-      margin: 0;
+      gap: 26px;
+      margin-top: 70px;
     }
 
     /* FOOTER */
@@ -268,46 +254,33 @@
 
       .hero {
         padding: 0 20px;
-        margin-bottom: 85px;
+        margin-bottom: 65px;
       }
 
       .hero img {
-        height: 390px;
+        height: 380px;
       }
 
       main {
         padding: 0 20px 90px;
       }
 
-      .intro-section {
-        margin-bottom: 90px;
-      }
-
-      .split-section {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        margin: 90px 0;
-      }
-
-      .split-section.reverse .media,
-      .split-section.reverse .text-block {
-        order: initial;
-      }
-
-      .media img {
-        height: 360px;
-      }
-
-      .dual-text {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        margin: 90px 0;
-      }
-
+      .case-grid,
+      .two-cards,
       .details {
         grid-template-columns: 1fr;
-        gap: 35px;
-        margin-top: 90px;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .feature-image {
+        margin: 50px 0;
+      }
+
+      .feature-image img {
+        height: 350px;
       }
 
       footer {
@@ -323,10 +296,14 @@
 
 <body>
 
+  <!-- NAV -->
+
   <nav>
     <a class="name" href="index.html">Aja Olufsen</a>
     <a class="back" href="index.html">← Back to projects</a>
   </nav>
+
+  <!-- HEADER -->
 
   <header class="project-header">
 
@@ -351,6 +328,8 @@
 
   </header>
 
+  <!-- HERO -->
+
   <div class="hero">
 
     <img
@@ -360,126 +339,200 @@
 
   </div>
 
+  <!-- CONTENT -->
+
   <main>
 
-    <section class="intro-section text-block">
+    <!-- TOP CASE GRID -->
 
-      <div class="section-label">About</div>
+    <section class="case-grid">
 
-      <h2>
-        A playful and anonymous way to start conversations about contraception.
-      </h2>
+      <div class="left-stack">
 
-      <p>
-        The Contraception Line was developed for Roskilde Festival as an
-        interactive installation exploring contraception, sexual health
-        and responsibility.
-      </p>
+        <div class="card">
 
-      <p>
-        Rather than presenting visitors with static information, the
-        installation invited them to participate and contribute their
-        own anonymous responses.
-      </p>
+          <h2>Context</h2>
 
-    </section>
+          <p>
+            The Contraception Line was developed for Roskilde Festival
+            as a playful and anonymous way of opening conversations about
+            contraception, sexual health and responsibility.
+          </p>
 
-    <!-- INTERACTION -->
+          <p>
+            Rather than presenting festival visitors with static information,
+            the installation invited them to actively participate and contribute
+            anonymous responses to a shared picture of behaviour and responsibility.
+          </p>
 
-    <section class="split-section">
+        </div>
 
-      <div class="media">
+        <div class="card">
 
-        <img
-          src="images/praeventionslinjen/praeventionslinjen-interaction.JPG"
-          alt="Visitor interacting with The Contraception Line"
-        >
+          <h2>The interaction</h2>
 
-      </div>
+          <p>
+            Visitors interact with the installation through a telephone
+            receiver and physical buttons.
+          </p>
 
-      <div class="text-block">
+          <p>
+            A short series of questions asks about sexual activity,
+            contraception and who took responsibility for protection.
+            The interaction was deliberately kept simple so it could work
+            naturally within a busy festival environment.
+          </p>
 
-        <div class="section-label">The interaction</div>
-
-        <h2>
-          Turning a familiar object into an anonymous conversation.
-        </h2>
-
-        <p>
-          Visitors interact with the installation through a telephone
-          receiver and physical buttons.
-        </p>
-
-        <p>
-          A short series of questions asks about sexual activity,
-          contraception and responsibility. The responses are collected
-          anonymously and used to visualise patterns in festival behaviour.
-        </p>
+        </div>
 
       </div>
 
+      <div class="right-stack">
+
+        <div class="card small-card">
+
+          <h2>Project snapshot</h2>
+
+          <p>
+            <strong>Year:</strong> 2026
+          </p>
+
+          <p>
+            <strong>Context:</strong> Roskilde Festival
+          </p>
+
+          <p>
+            <strong>Type:</strong> Interactive installation
+          </p>
+
+          <p>
+            <strong>Format:</strong> Telephone-based interaction
+          </p>
+
+          <p>
+            <strong>My role:</strong> Concept, interaction design,
+            prototyping and technical development
+          </p>
+
+        </div>
+
+        <div class="card small-card">
+
+          <h2>Tech & methods</h2>
+
+          <p>
+            <strong>Technology:</strong><br>
+            Arduino, audio playback, physical buttons,
+            LCD display and physical computing
+          </p>
+
+          <p>
+            <strong>Methods:</strong><br>
+            Interaction design, iterative prototyping,
+            testing and experience design
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
+
+    <!-- INTERACTION IMAGE -->
+
+    <div class="feature-image">
+
+      <img
+        src="images/praeventionslinjen/praeventionslinjen-interaction.JPG"
+        alt="Visitor interacting with The Contraception Line"
+      >
+
+    </div>
 
     <!-- ROLE + PROCESS -->
 
-    <section class="dual-text">
+    <section class="two-cards">
 
-      <div>
+      <div class="card">
 
-        <h3>My role</h3>
+        <h2>My role</h2>
 
         <p>
           I worked on the concept, interaction design, physical prototyping
-          and technical development of the installation, including the
-          interaction flow and the physical experience.
+          and technical development of the installation.
+        </p>
+
+        <p>
+          This included developing the interaction flow and translating
+          the concept into a physical experience that could operate reliably
+          during repeated festival use.
         </p>
 
       </div>
 
-      <div>
+      <div class="card">
 
-        <h3>Process</h3>
+        <h2>Process</h2>
 
         <p>
-          The project developed through iterative concept development,
-          physical prototyping, programming and testing, with a strong
-          focus on making the interaction simple and intuitive.
+          The project developed through iterative cycles of concept development,
+          electronics prototyping, programming and physical testing.
+        </p>
+
+        <p>
+          A key focus was balancing technical robustness with an interaction
+          that remained immediately understandable to festival visitors.
         </p>
 
       </div>
 
     </section>
 
-    <!-- PROTOTYPING -->
+    <!-- PROTOTYPING IMAGE -->
 
-    <section class="split-section reverse">
+    <div class="feature-image">
 
-      <div class="media">
+      <img
+        src="images/praeventionslinjen/praeventionslinjen-prototyping.JPG"
+        alt="Prototyping the electronics for The Contraception Line"
+      >
 
-        <img
-          src="images/praeventionslinjen/praeventionslinjen-prototyping.JPG"
-          alt="Prototyping the electronics for The Contraception Line"
-        >
+    </div>
 
-      </div>
+    <!-- DESIGN / OUTCOME -->
 
-      <div class="text-block">
+    <section class="two-cards">
 
-        <div class="section-label">Prototyping</div>
+      <div class="card">
 
-        <h2>
-          Building a robust interaction for a busy festival environment.
-        </h2>
+        <h2>Design approach</h2>
 
         <p>
-          The physical setup had to withstand repeated use while remaining
-          easy to understand without lengthy instructions.
+          The familiar telephone receiver acted as an intuitive invitation
+          to interact, reducing the need for lengthy instructions.
         </p>
 
         <p>
-          The familiar telephone receiver created a clear invitation to
-          interact, while physical buttons kept the experience direct and
-          accessible.
+          Physical buttons kept the interaction direct and accessible,
+          while the anonymous format allowed visitors to engage with
+          a sensitive topic without publicly disclosing personal information.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Experience</h2>
+
+        <p>
+          The installation used participation rather than passive information
+          to make contraception and responsibility part of the festival experience.
+        </p>
+
+        <p>
+          By combining an everyday object with a simple interactive flow,
+          the project created a low-threshold entry point into a topic that
+          can otherwise feel private or difficult to discuss.
         </p>
 
       </div>
@@ -490,9 +543,9 @@
 
     <div class="details">
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Methods</h3>
+        <h2>Methods</h2>
 
         <p>
           Interaction Design<br>
@@ -504,9 +557,9 @@
 
       </div>
 
-      <div>
+      <div class="card small-card">
 
-        <h3>Technology</h3>
+        <h2>Technology</h2>
 
         <p>
           Arduino<br>
@@ -521,6 +574,8 @@
     </div>
 
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
 
