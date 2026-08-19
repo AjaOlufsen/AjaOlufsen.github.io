@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Unit 12:2 — Aja Olufsen</title>
+  <title>UNIT 12:2 — Aja Olufsen</title>
 
   <style>
     * {
@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
+      background: #f7f7f5;
       color: #111111;
       line-height: 1.6;
     }
@@ -25,110 +25,182 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 35px 40px;
+      padding: 34px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
     .back {
       font-size: 14px;
-      color: #666;
+      color: #777;
     }
 
     .back:hover {
       color: #111;
     }
 
-    /* PROJECT HEADER */
+    /* HEADER */
 
     .project-header {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 100px 40px 70px;
+      padding: 90px 40px 60px;
     }
 
     .project-header h1 {
-      font-size: clamp(45px, 7vw, 85px);
+      margin: 0 0 26px;
+      max-width: 1000px;
+
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 500;
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 0 0 25px;
+      letter-spacing: -4px;
+      line-height: 0.98;
     }
 
     .project-meta {
-      color: #777;
       font-size: 15px;
+      color: #777;
+      margin-bottom: 28px;
     }
 
-    /* HERO IMAGE */
-
-    .hero-image {
-      max-width: 1200px;
-      height: 800px;
-      margin: 0 auto;
-      background: #eeeeee;
-      overflow: hidden;
+    .project-intro {
+      max-width: 760px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #4d4d4d;
+      margin: 0 0 30px;
     }
 
-    .hero-image img {
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d9d9d6;
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto 120px;
+      padding: 0 40px;
+    }
+
+    .hero img {
       width: 100%;
-      height: 100%;
+      height: 620px;
       object-fit: cover;
       display: block;
+      border-radius: 18px;
     }
 
     /* CONTENT */
 
-    .content {
-      max-width: 800px;
+    main {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 0 40px 130px;
     }
 
-    .section {
-      margin-bottom: 80px;
-    }
-
-    .section h2 {
-      font-size: 14px;
+    .section-label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.6px;
+      color: #8a8a8a;
+      margin-bottom: 18px;
+    }
+
+    .text-block h2 {
+      font-size: clamp(30px, 3.2vw, 46px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+      margin: 0 0 26px;
+    }
+
+    .text-block p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #4b4b4b;
+      margin: 0 0 20px;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      max-width: 780px;
+      margin: 0 0 130px;
+    }
+
+    /* SPLIT SECTIONS */
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin: 130px 0;
+    }
+
+    .split-section.reverse .media {
+      order: 2;
+    }
+
+    .split-section.reverse .text-block {
+      order: 1;
+    }
+
+    .media img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* ROLE / PROCESS */
+
+    .dual-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      margin: 130px 0;
+      padding-top: 70px;
+      border-top: 1px solid #dcdcd8;
+    }
+
+    .dual-text h3 {
+      font-size: 22px;
       font-weight: 500;
       margin: 0 0 20px;
     }
 
-    .section p {
-      font-size: 18px;
-      margin: 0 0 22px;
-      color: #333;
-    }
-
-    /* IMAGE */
-
-    .project-image {
-      width: 100%;
-      height: 700px;
-      background: #eeeeee;
-      margin: 60px 0;
-      overflow: hidden;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .dual-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+      margin: 0 0 18px;
     }
 
     /* DETAILS */
@@ -136,20 +208,23 @@
     .details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      border-top: 1px solid #ddd;
-      padding-top: 30px;
+      gap: 70px;
+      padding-top: 50px;
+      border-top: 1px solid #dcdcd8;
+      margin-top: 130px;
     }
 
     .details h3 {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin: 0 0 16px;
     }
 
     .details p {
       font-size: 15px;
+      line-height: 1.8;
       color: #666;
       margin: 0;
     }
@@ -157,11 +232,14 @@
     /* FOOTER */
 
     footer {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 50px 40px;
-      border-top: 1px solid #ddd;
+      padding: 40px;
+      border-top: 1px solid #dcdcd8;
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
+      color: #666;
     }
 
     footer a {
@@ -171,227 +249,301 @@
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 25px 20px;
+        padding: 24px 20px;
       }
 
       .project-header {
-        padding: 70px 20px 50px;
+        padding: 65px 20px 45px;
       }
 
-      .hero-image {
-        height: 350px;
-        margin: 0 20px;
+      .project-header h1 {
+        letter-spacing: -2.5px;
       }
 
-      .content {
-        padding: 70px 20px;
+      .project-intro {
+        font-size: 18px;
       }
 
-      .project-image {
-        height: 350px;
+      .hero {
+        padding: 0 20px;
+        margin-bottom: 85px;
+      }
+
+      .hero img {
+        height: 390px;
+      }
+
+      main {
+        padding: 0 20px 90px;
+      }
+
+      .intro-section {
+        margin-bottom: 90px;
+      }
+
+      .split-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 90px 0;
+      }
+
+      .split-section.reverse .media,
+      .split-section.reverse .text-block {
+        order: initial;
+      }
+
+      .media img {
+        height: 360px;
+      }
+
+      .dual-text {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin: 90px 0;
       }
 
       .details {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
+        margin-top: 90px;
       }
 
       footer {
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 30px 0;
+        flex-direction: column;
+        gap: 10px;
       }
     }
+
   </style>
-
 </head>
-
 
 <body>
 
   <!-- NAVIGATION -->
 
   <nav>
-
-    <a class="name" href="index.html">
-      Aja Olufsen
-    </a>
-
-    <a class="back" href="index.html">
-      ← Back to projects
-    </a>
-
+    <a class="name" href="index.html">Aja Olufsen</a>
+    <a class="back" href="index.html">← Back to projects</a>
   </nav>
 
-
-  <!-- PROJECT TITLE -->
+  <!-- HEADER -->
 
   <header class="project-header">
 
-    <h1>UNIT 12:2</h1>
+    <h1>UNIT 12:2 — The Future Consultation</h1>
 
     <div class="project-meta">
       Interactive Installation · Steno Museum · 2026
     </div>
 
+    <p class="project-intro">
+      A speculative robotic consultation exploring contraception,
+      gender and reproductive responsibility through an intentionally
+      unsettling museum experience.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Research through Design</span>
+      <span class="tag">Speculative Design</span>
+      <span class="tag">Physical Computing</span>
+      <span class="tag">Interaction Design</span>
+    </div>
+
   </header>
 
+  <!-- HERO -->
 
-  <!-- MAIN IMAGE -->
-
-  <div class="hero-image">
+  <div class="hero">
 
     <img
       src="images/future-consultation/future-consultation-hero-new.jpg"
-      alt="Future Consultation interactive installation"
+      alt="UNIT 12:2 Future Consultation interactive installation"
     >
 
   </div>
 
+  <!-- CONTENT -->
 
-  <!-- PROJECT CONTENT -->
-
-  <main class="content">
-
+  <main>
 
     <!-- ABOUT -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>About</h2>
+      <div class="section-label">About</div>
+
+      <h2>
+        A fictional future consultation designed to challenge familiar ideas
+        about contraception.
+      </h2>
 
       <p>
-        UNIT 12:2 — The Future Consultation is an interactive museum
-        installation developed in collaboration with Steno Museum in Aarhus.
-        The project explores contraception, responsibility and gender through
-        a speculative consultation with a robotic doctor.
+        UNIT 12:2 — The Future Consultation was developed in collaboration
+        with Steno Museum in Aarhus.
       </p>
 
       <p>
-        Designed for young museum visitors, the installation asks participants
-        to make decisions about protection, duration and responsibility before
-        receiving a personalised contraceptive recommendation.
-      </p>
-
-    </section>
-
-
-    <!-- THE CONCEPT -->
-
-    <section class="section">
-
-      <h2>The concept</h2>
-
-      <p>
-        Rather than simply presenting information about contraception, the
-        installation deliberately challenges expectations about who is
-        responsible for preventing pregnancy.
-      </p>
-
-      <p>
-        After answering a series of questions, visitors can receive an
-        unexpected or mismatched contraceptive method. A boy might, for
-        example, be prescribed the pill. The mismatch is used as a design
-        intervention to make assumptions about gender, responsibility and
-        reproductive labour visible.
+        The installation invites young museum visitors into a speculative
+        consultation with a robotic doctor, where decisions about protection,
+        duration and responsibility lead to a personalised contraceptive
+        recommendation.
       </p>
 
     </section>
 
+    <!-- CONCEPT -->
 
-    <!-- PROCESS IMAGE -->
+    <section class="split-section">
 
-    <div class="project-image">
+      <div class="media">
 
-      <img
-        src="images/future-consultation/future-consultation-process.jpg"
-        alt="Development process of the Future Consultation installation"
-      >
+        <img
+          src="images/future-consultation/future-consultation-process.jpg"
+          alt="Development process of the Future Consultation installation"
+        >
 
-    </div>
+      </div>
 
+      <div class="text-block">
+
+        <div class="section-label">The concept</div>
+
+        <h2>
+          Using mismatch to make invisible assumptions visible.
+        </h2>
+
+        <p>
+          Rather than simply presenting information, the installation
+          deliberately disrupts expectations about who should be responsible
+          for preventing pregnancy.
+        </p>
+
+        <p>
+          A participant may receive a contraceptive method that does not
+          traditionally correspond to their gender — for example, a boy may
+          be prescribed the pill.
+        </p>
+
+        <p>
+          This mismatch functions as a design intervention, creating space
+          for reflection on gender roles, reproductive labour and unequal
+          contraceptive responsibility.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ROLE + PROCESS -->
+
+    <section class="dual-text">
+
+      <div>
+
+        <h3>My role</h3>
+
+        <p>
+          I developed the project as part of a three-person design team.
+          My work included concept development, interaction design,
+          Research through Design, user research and prototyping.
+        </p>
+
+        <p>
+          I also contributed to the physical and technical development
+          of the installation.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Process</h3>
+
+        <p>
+          The process included workshops with young people, iterative
+          prototype testing and continuous development of both the
+          interaction and the physical expression of the robotic consultation.
+        </p>
+
+        <p>
+          Insights from testing were used to refine both the scenarios and
+          the balance between information, surprise and discomfort.
+        </p>
+
+      </div>
+
+    </section>
 
     <!-- INTERACTION -->
 
-    <section class="section">
+    <section class="split-section reverse">
 
-      <h2>The interaction</h2>
+      <div class="media">
 
-      <p>
-        Visitors enter a fictional future consultation and interact with the
-        robotic doctor through a sequence of questions. The system responds
-        through movement, sound and a physical printed receipt.
-      </p>
+        <img
+          src="images/future-consultation/future-consultation-context.jpg"
+          alt="Future Consultation installation in a museum context"
+        >
 
-      <p>
-        The receipt presents the suggested contraceptive method together with
-        information about use, protection and side effects. It also introduces
-        facts about the unequal number of contraceptive options available to
-        men and women, encouraging visitors to compare their recommendation
-        with existing reproductive realities.
-      </p>
+      </div>
 
-    </section>
+      <div class="text-block">
 
+        <div class="section-label">The interaction</div>
 
-    <!-- MY ROLE -->
+        <h2>
+          From consultation to printed recommendation.
+        </h2>
 
-    <section class="section">
+        <p>
+          Visitors interact with the robotic doctor through a sequence
+          of questions about protection, duration and responsibility.
+        </p>
 
-      <h2>My role</h2>
+        <p>
+          The robot responds through movement and sound before producing
+          a physical printed receipt containing the suggested contraceptive
+          method.
+        </p>
 
-      <p>
-        I developed the project as part of a three-person design team. My work
-        included concept development, interaction design, Research through
-        Design, user research, prototyping and the physical and technical
-        development of the installation.
-      </p>
+        <p>
+          The receipt also presents information about use, side effects,
+          protection and the unequal number of contraceptive options
+          available to men and women.
+        </p>
 
-      <p>
-        The process included workshops with young people, iterative prototype
-        testing and continuous development of both the interaction and the
-        physical expression of the robotic consultation.
-      </p>
+      </div>
 
     </section>
-
-
-    <!-- CONTEXT IMAGE -->
-
-    <div class="project-image">
-
-      <img
-        src="images/future-consultation/future-consultation-context.jpg"
-        alt="Future Consultation installation in a museum context"
-      >
-
-    </div>
-
 
     <!-- DESIGN APPROACH -->
 
-    <section class="section">
+    <section class="intro-section text-block">
 
-      <h2>Design approach</h2>
+      <div class="section-label">Design approach</div>
+
+      <h2>
+        Designing for reflection rather than giving the visitor a correct answer.
+      </h2>
 
       <p>
-        The project used speculative and discursive design to create reflection
-        rather than provide a single correct answer. Instead of designing a
-        neutral information interface, we used discomfort, surprise and role
-        reversal as active parts of the interaction.
+        The project draws on speculative and discursive design to use
+        discomfort, surprise and role reversal as active parts of the
+        museum experience.
       </p>
 
       <p>
-        Through workshops and user testing, we investigated how teenagers
-        understood different contraceptive methods and how they discussed
-        responsibility when confronted with scenarios that challenged familiar
-        gender roles.
+        Through workshops and testing, we explored how teenagers understood
+        contraception and how they negotiated responsibility when familiar
+        gender roles were challenged.
       </p>
 
     </section>
-
 
     <!-- DETAILS -->
 
@@ -412,7 +564,6 @@
 
       </div>
 
-
       <div>
 
         <h3>Technology</h3>
@@ -430,20 +581,19 @@
 
     </div>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
+
+    <span>© Aja Olufsen</span>
 
     <a href="index.html">
       ← Back to all projects
     </a>
 
   </footer>
-
 
 </body>
 
